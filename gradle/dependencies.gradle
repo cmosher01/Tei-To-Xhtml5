@@ -1,0 +1,14 @@
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation group: 'nu.mine.mosher.xml', name: 'xslt-pipeline', version: 'latest.integration'
+
+    runtimeOnly group: 'xerces', name: 'xercesImpl', version: 'latest.release', {
+        exclude group: 'xml-apis'
+    }
+    runtimeOnly group: 'net.sf.saxon', name: 'Saxon-HE', version: 'latest.release'
+}
