@@ -29,7 +29,7 @@ import java.util.*;
 import java.util.stream.*;
 
 public class TeiToXhtml5 {
-    public static void transform(final BufferedInputStream inTei, final BufferedOutputStream outXhtml5) throws IOException, TransformerException, ParserConfigurationException, SAXException {
+    public static void transform(final BufferedInputStream inTei, final BufferedOutputStream outXhtml5, final boolean createFullPage) throws IOException, TransformerException, ParserConfigurationException, SAXException {
         final XsltPipeline pipeline = new XsltPipeline();
 
         pipeline.dom(inTei);
@@ -38,7 +38,9 @@ public class TeiToXhtml5 {
         pipeline.xslt(lib("xslt/tei-norm-text.xslt"));
         pipeline.xslt(lib("xslt/tei-xhtml-specific.xslt"));
         pipeline.xslt(lib("xslt/tei-xhtml-general.xslt"));
-        pipeline.xslt(lib("xslt/tei-xhtml-page.xslt"));
+        if (createFullPage) {
+            pipeline.xslt(lib("xslt/tei-xhtml-page.xslt"));
+        }
         pipeline.serialize(outXhtml5);
     }
 
@@ -62,7 +64,7 @@ public class TeiToXhtml5 {
         } else {
             try (final BufferedInputStream in = new BufferedInputStream(new FileInputStream(FileDescriptor.in));
                  final BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(FileDescriptor.out))) {
-                transform(in, out);
+                transform(in, out, true);
             }
         }
         System.out.flush();
