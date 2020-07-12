@@ -40,6 +40,7 @@ public class TeiToXhtml5 {
         pipeline.xslt(lib("xslt/tei-xhtml-general.xslt"));
         if (createFullPage) {
             pipeline.xslt(lib("xslt/tei-xhtml-page.xslt"));
+            pipeline.xmldecl(true);
         }
         pipeline.serialize(outXhtml5);
     }
