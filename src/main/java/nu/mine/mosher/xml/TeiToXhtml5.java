@@ -18,6 +18,7 @@
 */
 package nu.mine.mosher.xml;
 
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -26,12 +27,22 @@ import java.io.*;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.stream.*;
+import java.util.stream.Collectors;
 
 public class TeiToXhtml5 {
     public static void transform(final BufferedInputStream inTei, final BufferedOutputStream outXhtml5, final boolean createFullPage) throws IOException, TransformerException, ParserConfigurationException, SAXException {
         final XsltPipeline pipeline = new XsltPipeline();
+        runPipeline(inTei, createFullPage, pipeline);
+        pipeline.serialize(outXhtml5);
+    }
 
+    public static void transform(final BufferedInputStream inTei, final Node appendTo) throws IOException, TransformerException, ParserConfigurationException, SAXException {
+        final XsltPipeline pipeline = new XsltPipeline();
+        runPipeline(inTei, false, pipeline);
+        appendTo.appendChild(pipeline.accessDom());
+    }
+
+    private static void runPipeline(BufferedInputStream inTei, boolean createFullPage, XsltPipeline pipeline) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         pipeline.dom(inTei);
         pipeline.xslt(lib("xslt/tei-copyOf.xslt"));
         pipeline.xslt(lib("xslt/tei-facs.xslt"));
@@ -42,7 +53,6 @@ public class TeiToXhtml5 {
             pipeline.xslt(lib("xslt/tei-xhtml-page.xslt"));
             pipeline.xmldecl(true);
         }
-        pipeline.serialize(outXhtml5);
     }
 
     public static String getCss() throws IOException {
