@@ -39,7 +39,7 @@ public class TeiToXhtml5 {
     public static void transform(final BufferedInputStream inTei, final Node appendTo) throws IOException, TransformerException, ParserConfigurationException, SAXException {
         final XsltPipeline pipeline = new XsltPipeline();
         runPipeline(inTei, false, pipeline);
-        appendTo.appendChild(pipeline.accessDom());
+        appendTo.appendChild(appendTo.getOwnerDocument().importNode(pipeline.accessDom(), true));
     }
 
     private static void runPipeline(BufferedInputStream inTei, boolean createFullPage, XsltPipeline pipeline) throws ParserConfigurationException, IOException, SAXException, TransformerException {
