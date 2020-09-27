@@ -36,6 +36,13 @@
         </xsl:element>
     </xsl:template>
 
+    <!-- TEI title ==> HTML cite -->
+    <xsl:template match="tei:title">
+        <xsl:element name="cite" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+
     <!-- TEI ref target=url ==> HTML a class=tei-ref href=url -->
     <xsl:template match="tei:ref[@target]">
         <xsl:element name="a" namespace="http://www.w3.org/1999/xhtml">
