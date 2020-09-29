@@ -36,14 +36,13 @@
 }
 
 hr {
-    border-style: solid;
+    border-style: dotted;
     border-width: 1px 0 0 0;
-    border-color: var(--sol-base1);
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .tei-pb::before {
-    content: "\00000a\00000a\00000a\00000a";
+    content: "\00000a\00000a";
     white-space: pre;
 }
 
@@ -104,18 +103,15 @@ hr {
 
 [title]:hover {
     cursor: help;
-    background-color: #d3368240 /*solarized magenta + alpha*/;
+    text-decoration: wavy underline;
 }
 
 .editorial {
     align-items: center;
-    background: var(--sol-base2);
-    border-radius: .5em;
-    border: thin solid var(--sol-base1);
-    color: var(--sol-magenta);
+    border-radius: .3em;
+    border: thin dotted gray;
     display: inline-flex;
-    padding: .15em .5em .25em .5em;
-    margin: .25em 0 .35em 0;
+    padding: 0 .25em .25em .25em;
 }
 
 .tei-del {
