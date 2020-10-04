@@ -67,7 +67,11 @@
                     <xsl:apply-templates select="@* | node()"/>
                 </xsl:element>
                 <xsl:element name="footer" namespace="http://www.w3.org/1999/xhtml">
-                    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"/>
+                    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml">
+                        <xsl:attribute name="class">
+                            <xsl:value-of select="'tei'"/>
+                        </xsl:attribute>
+                    </xsl:element>
                     <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                         <xsl:attribute name="class">
                             <xsl:value-of select="'copyright'"/>

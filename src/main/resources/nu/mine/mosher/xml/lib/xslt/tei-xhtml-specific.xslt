@@ -72,7 +72,11 @@
                 <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
-            <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"/>
+            <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml">
+                <xsl:attribute name="class">
+                    <xsl:value-of select="'tei'"/>
+                </xsl:attribute>
+            </xsl:element>
             <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
                     <xsl:value-of select="'editorial'"/>

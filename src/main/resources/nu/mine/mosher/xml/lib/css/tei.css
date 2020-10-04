@@ -35,19 +35,14 @@
     font-size: 80%;
 }
 
-/* TODO can we avoid affecting the general style here? */
-hr {
+hr.tei {
     border-style: dotted;
-    border-width: 1px 0 0 0;
+    border-width: thin 0 0 0;
     margin: 1em 0;
 }
 
+.tei-lb::before,
 .tei-pb::before {
-    content: "\00000a\00000a";
-    white-space: pre;
-}
-
-.tei-lb::before {
     content: "\00000a";
     white-space: pre;
 }
@@ -102,10 +97,10 @@ hr {
     display: none;
 }
 
-/* TODO can we avoid affecting the general style here? */
 [title]:hover {
     cursor: help;
-    text-decoration: wavy underline;
+    border-radius: .3em;
+    border: thin dotted gray;
 }
 
 .editorial {
