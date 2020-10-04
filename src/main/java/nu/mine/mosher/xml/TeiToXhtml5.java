@@ -60,15 +60,7 @@ public class TeiToXhtml5 {
 
     private static void runPipeline(final BufferedInputStream inTei, final boolean createFullPage, final XsltPipeline pipeline) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         pipeline.dom(inTei);
-        pipeline.xslt(lib("xslt/tei-copyOf.xslt"));
-        pipeline.xslt(lib("xslt/tei-facs.xslt"));
-        pipeline.xslt(lib("xslt/tei-norm-text.xslt"));
-        pipeline.xslt(lib("xslt/tei-xhtml-specific.xslt"));
-        pipeline.xslt(lib("xslt/tei-xhtml-general.xslt"));
-        if (createFullPage) {
-            pipeline.xslt(lib("xslt/tei-xhtml-page.xslt"));
-            pipeline.xmldecl(true);
-        }
+        runPipeline(pipeline, createFullPage);
     }
 
     public static String getCss() throws IOException {

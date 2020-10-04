@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'nu.mine.mosher.xml', name: 'xslt-pipeline', version: 'latest.integration'
+    api group: 'nu.mine.mosher.xml', name: 'xslt-pipeline', version: 'latest.integration'
 
     runtimeOnly group: 'xerces', name: 'xercesImpl', version: 'latest.release', {
         exclude group: 'xml-apis'
