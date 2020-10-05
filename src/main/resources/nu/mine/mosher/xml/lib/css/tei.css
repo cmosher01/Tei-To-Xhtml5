@@ -123,6 +123,10 @@ hr.tei {
     font-style: italic;
 }
 
+.tei-title[level=a], .tei-title[level=u] {
+    font-style: inherit;
+}
+
 img.tei-graphic {
     width: 100%;
     object-fit: scale-down;
