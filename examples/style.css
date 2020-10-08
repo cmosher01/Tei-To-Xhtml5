@@ -86,19 +86,11 @@ sub {
 
 
 /*
-TODO:
 
-.tei-title[level=m], .tei-title[level=j], .tei-title[level=s] {
-    font-style: italic;
-}
 
-.tei-title[level=a], .tei-title[level=u] {
-    font-style: inherit;
-}
 
-.tei-bibl>.tei-ref {
-    word-break: break-all;
-}
+
+
 
 
 
@@ -117,20 +109,6 @@ hr.tei {
     border-width: thin 0 0 0;
     margin: 1em 0;
 }
-
-[type=turnover]>.tei-lb, [type=turnunder]>.tei-lb {
-    display: none;
-}
-
-
-.tei-choice>.tei-expan, .tei-choice>.tei-reg, .tei-choice>.tei-corr {
-    display: none;
-}
-
-
-
-
-HANDLED:
 
 
 [rend~=italic] {
@@ -155,5 +133,24 @@ HANDLED:
 }
 
 
+[type=turnover]>.tei-lb, [type=turnunder]>.tei-lb {
+    display: none;
+}
 
+
+.tei-choice>.tei-expan, .tei-choice>.tei-reg, .tei-choice>.tei-corr {
+    display: none;
+}
+
+.tei-title[level=m], .tei-title[level=j], .tei-title[level=s] {
+    font-style: italic;
+}
+
+.tei-title[level=a], .tei-title[level=u] {
+    font-style: inherit;
+}
+
+.tei-bibl>.tei-ref {
+    word-break: break-all;
+}
 */

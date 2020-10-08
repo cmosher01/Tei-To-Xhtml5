@@ -32,6 +32,12 @@
     <!-- TEI head ==> HTML header -->
     <xsl:template match="tei:head">
         <xsl:element name="header" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
@@ -39,8 +45,11 @@
     <!-- TEI title ==> HTML cite -->
     <xsl:template match="tei:title">
         <xsl:element name="cite" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
@@ -50,8 +59,11 @@
     <xsl:template match="tei:ref[@target]">
         <xsl:element name="a" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*[name(.)!='target']"/>
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:attribute name="href">
                 <xsl:value-of select="@target"/>
@@ -68,21 +80,37 @@
         </xsl:element>
     </xsl:template>
 
+    <!-- TEI lb ==> HTML br -->
+    <xsl:template match="tei:lb">
+        <xsl:element name="br" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
+
     <!-- TEI pb ==> HTML span class="editorial tei-pb" [page:n(type)] -->
     <xsl:template match="tei:pb">
-        <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-block'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'tei'"/>
+                    <xsl:value-of select="'tei tei-block'"/>
                 </xsl:attribute>
             </xsl:element>
             <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'editorial'"/>
+                    <xsl:value-of select="'tei tei-inline tei-editorial'"/>
                 </xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="@n">
@@ -104,18 +132,36 @@
     <!-- TEI list/head+item ==> HTML dl/dt+dd -->
     <xsl:template match="tei:list">
         <xsl:element name="dl" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates mode="list"/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:head" mode="list">
         <xsl:element name="dt" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:item" mode="list">
         <xsl:element name="dd" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates/>
         </xsl:element>
@@ -124,17 +170,35 @@
     <!-- TEI table/row/cell ==> HTML table/tr/td -->
     <xsl:template match="tei:table">
         <xsl:element name="table" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates mode="table"/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:row" mode="table">
         <xsl:element name="tr" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates mode="table_row"/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:cell" mode="table_row">
+        <xsl:attribute name="tei">
+            <xsl:value-of select="fn:local-name()"/>
+        </xsl:attribute>
+        <xsl:attribute name="class">
+            <xsl:value-of select="'tei tei-block'"/>
+        </xsl:attribute>
         <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates/>
@@ -145,8 +209,11 @@
     <xsl:template match="tei:fw[@type]">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*"/>
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="@type"/>
@@ -159,8 +226,11 @@
     <xsl:template match="tei:date[@when]">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*"/>
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:concat('date: ',@when)"/>
@@ -173,8 +243,11 @@
     <xsl:template match="tei:date[@when-custom]">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*"/>
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:concat('date: ',@when-custom,' (',@datingMethod,')')"/>
@@ -184,14 +257,20 @@
     </xsl:template>
 
     <!-- TEI * ref="http..." ==> HTML <a href="http...">*...</a> -->
-    <xsl:template match="element()[fn:starts-with(@ref, 'http')]">
+    <xsl:template match="element()[@ref]">
         <xsl:element name="a" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
             <xsl:attribute name="href">
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
             <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                    <xsl:value-of select="'tei'"/>
                 </xsl:attribute>
                 <xsl:apply-templates select="@* | node()"/>
             </xsl:element>
@@ -202,8 +281,11 @@
     <xsl:template match="tei:choice[tei:expan|tei:reg|tei:corr]">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="@*"/>
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:distinct-values((tei:expan,tei:reg,tei:corr))"/>
@@ -215,13 +297,13 @@
     <!-- TEI supplied ==> HTML [...] -->
     <xsl:template match="tei:supplied">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline tei-editorial'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
-            <xsl:attribute name="class">
-                <xsl:value-of select="'editorial'"/>
-            </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:local-name()"/>
                 <xsl:if test="@*">
@@ -240,8 +322,11 @@
     <!-- TEI gap/unclear ==> HTML [...] -->
     <xsl:template match="tei:gap | tei:unclear">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                <xsl:value-of select="'tei tei-inline'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:attribute name="title">
@@ -255,14 +340,14 @@
             </xsl:attribute>
             <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'editorial'"/>
+                    <xsl:value-of select="'tei tei-editorial'"/>
                 </xsl:attribute>
                 <xsl:value-of select="'['"/>
             </xsl:element>
             <xsl:if test="fn:not(node())">
                 <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:attribute name="class">
-                        <xsl:value-of select="'editorial'"/>
+                        <xsl:value-of select="'tei tei-editorial'"/>
                     </xsl:attribute>
                     <xsl:value-of select="'…'"/>
                 </xsl:element>
@@ -270,7 +355,7 @@
             <xsl:apply-templates/>
             <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'editorial'"/>
+                    <xsl:value-of select="'tei tei-editorial'"/>
                 </xsl:attribute>
                 <xsl:value-of select="']'"/>
             </xsl:element>
@@ -282,12 +367,21 @@
     <!-- TEI graphic ==> HTML img -->
     <xsl:template match="tei:graphic">
         <xsl:element name="a" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
             <xsl:attribute name="href">
                 <xsl:value-of select="@url"/>
             </xsl:attribute>
             <xsl:element name="img" namespace="http://www.w3.org/1999/xhtml">
+                <xsl:attribute name="tei">
+                    <xsl:value-of select="fn:local-name()"/>
+                </xsl:attribute>
                 <xsl:attribute name="class">
-                    <xsl:value-of select="fn:concat('tei-', fn:local-name())"/>
+                    <xsl:value-of select="'tei tei-inline tei-limsize'"/>
                 </xsl:attribute>
                 <xsl:attribute name="src">
                     <xsl:value-of select="@url"/>
@@ -296,4 +390,79 @@
             </xsl:element>
         </xsl:element>
     </xsl:template>
+
+
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'sup') or fn:contains-token(@rend, 'turnover')]">
+        <xsl:element name="sup" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'sub') or fn:contains-token(@rend, 'turnunder')]">
+        <xsl:element name="sub" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'italic')]">
+        <xsl:element name="i" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'underline')]">
+        <xsl:element name="u" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'bold')]">
+        <xsl:element name="b" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+
+    <xsl:template match="tei:teiHeader">
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-hidden'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
 </xsl:stylesheet>

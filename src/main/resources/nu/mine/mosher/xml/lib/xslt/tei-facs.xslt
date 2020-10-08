@@ -22,6 +22,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:exsl="http://exslt.org/common"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
 >
     <xsl:output method="xml" version="1.1" encoding="UTF-8"/>
 
@@ -39,5 +40,17 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()" mode="#current"/>
         </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="tei:facsimile" mode="#all">
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-hidden'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

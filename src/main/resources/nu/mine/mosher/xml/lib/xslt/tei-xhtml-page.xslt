@@ -20,11 +20,13 @@
 <xsl:stylesheet
     version="3.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
     <xsl:output method="xml" version="1.1" encoding="UTF-8"/>
     <xsl:mode on-no-match="shallow-copy"/>
 
-    <xsl:template match="element()[@class='tei-TEI']">
+    <xsl:template match="xhtml:div[@tei='TEI']">
         <xsl:element name="html" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">
                 <xsl:value-of select="'fontFeatures unicodeWebFonts solarizedLight'"/>
@@ -47,7 +49,7 @@
                     </xsl:attribute>
                 </xsl:element>
                 <xsl:element name="title" namespace="http://www.w3.org/1999/xhtml">
-                    <xsl:value-of select="//element()[@class='tei-title']/text()"/>
+                    <xsl:value-of select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='titleStmt']/xhtml:cite[@tei='title']/text()" />
                 </xsl:element>
             </xsl:element>
             <xsl:element name="body" namespace="http://www.w3.org/1999/xhtml">
@@ -63,6 +65,9 @@
                         )
                     </xsl:element>
                 </xsl:element>
+                <xsl:element name="header" namespace="http://www.w3.org/1999/xhtml">
+                    <xsl:apply-templates select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='sourceDesc']"/>
+                </xsl:element>
                 <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:apply-templates select="@* | node()"/>
                 </xsl:element>
@@ -76,7 +81,7 @@
                         <xsl:attribute name="class">
                             <xsl:value-of select="'copyright'"/>
                         </xsl:attribute>
-                        <xsl:apply-templates select="node()[@class='tei-teiHeader']/node()[@class='tei-fileDesc']/node()[@class='tei-publicationStmt']/node()[@class='tei-availability']"/>
+                        <xsl:apply-templates select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='publicationStmt']/xhtml:span[@tei='availability']"/>
                     </xsl:element>
                 </xsl:element>
             </xsl:element>
