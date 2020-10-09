@@ -22,8 +22,20 @@ sub {
     line-height: 100%
 }
 
-.tei-hidden {
-    display: none;
+.tei-inline {
+    display: inline;
+}
+
+.tei-block {
+    display: block;
+}
+
+.tei-nofontstyle {
+    font-style: unset;
+}
+
+.tei-verticalmargin {
+    margin: 1ex 0;
 }
 
 .tei-limsize {
@@ -32,7 +44,6 @@ sub {
     object-position: left top;
     max-height: 1500px;
 }
-
 
 .tei[rend~=center] {
     text-align: center;
@@ -59,101 +70,21 @@ sub {
     font-size: 150%;
 }
 
-
-
-
-.tei-del {
-    text-decoration: line-through;
+.tei-hr {
+    border-width: 1px 0 0 0;
+    border-style: dotted;
+    border-color: gray;
 }
-
-
 
 .tei[title]:hover {
     cursor: help;
-    border-radius: .2em;
     border: 1px dotted gray;
+    border-radius: .2em;
     margin: -1px;
 }
 
 .tei-editorial {
-    align-items: center;
-    border-radius: .3em;
-    border: thin dotted gray;
-    display: inline-flex;
-    padding: 0 .25em .25em .25em;
+    border: 1px dotted gray;
+    border-radius: .2em;
+    margin: -1px;
 }
-
-
-
-/*
-TODO:
-
-.tei-title[level=m], .tei-title[level=j], .tei-title[level=s] {
-    font-style: italic;
-}
-
-.tei-title[level=a], .tei-title[level=u] {
-    font-style: inherit;
-}
-
-.tei-bibl>.tei-ref {
-    word-break: break-all;
-}
-
-
-
-.tei-fileDesc>.tei-titleStmt {
-    margin-bottom: 2ex;
-    font-size: 110%;
-}
-
-.tei-fileDesc>.tei-sourceDesc {
-    margin-bottom: 3ex;
-    font-size: 80%;
-}
-
-hr.tei {
-    border-style: dotted;
-    border-width: thin 0 0 0;
-    margin: 1em 0;
-}
-
-[type=turnover]>.tei-lb, [type=turnunder]>.tei-lb {
-    display: none;
-}
-
-
-.tei-choice>.tei-expan, .tei-choice>.tei-reg, .tei-choice>.tei-corr {
-    display: none;
-}
-
-
-
-
-HANDLED:
-
-
-[rend~=italic] {
-    font-style: italic;
-}
-
-[rend~=underline] {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-}
-
-[rend~=sup], [type=turnover] {
-    position: relative;
-    font-size: 75%;
-    top: -0.5em;
-}
-
-[rend~=sub], [type=turnunder] {
-    position: relative;
-    font-size: 75%;
-    top: 0.5em;
-}
-
-
-
-*/

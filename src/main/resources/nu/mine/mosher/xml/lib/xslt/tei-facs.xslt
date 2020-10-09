@@ -26,7 +26,7 @@
 >
     <xsl:output method="xml" version="1.1" encoding="UTF-8"/>
 
-    <xsl:template match="element()[@facs[starts-with(.,'#')]]" mode="#all">
+    <xsl:template match="*[@facs[starts-with(.,'#')]]" mode="#all">
         <xsl:copy>
             <xsl:apply-templates select="@* except @facs"/>
             <xsl:apply-templates select="exsl:node-set(fn:element-with-id(fn:substring(@facs,2)))" mode="noID"/>
@@ -49,6 +49,9 @@
             </xsl:attribute>
             <xsl:attribute name="class">
                 <xsl:value-of select="'tei tei-hidden'"/>
+            </xsl:attribute>
+            <xsl:attribute name="hidden">
+                <xsl:value-of select="'hidden'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*|node()" mode="#current"/>
         </xsl:element>

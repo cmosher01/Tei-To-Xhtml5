@@ -49,7 +49,7 @@
                     </xsl:attribute>
                 </xsl:element>
                 <xsl:element name="title" namespace="http://www.w3.org/1999/xhtml">
-                    <xsl:value-of select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='titleStmt']/xhtml:cite[@tei='title']/text()" />
+                    <xsl:value-of select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='titleStmt']/xhtml:*[@tei='title']/text()" />
                 </xsl:element>
             </xsl:element>
             <xsl:element name="body" namespace="http://www.w3.org/1999/xhtml">
@@ -66,7 +66,7 @@
                     </xsl:element>
                 </xsl:element>
                 <xsl:element name="header" namespace="http://www.w3.org/1999/xhtml">
-                    <xsl:apply-templates select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='sourceDesc']"/>
+                    <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='sourceDesc']"/>
                 </xsl:element>
                 <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:apply-templates select="@* | node()"/>
@@ -81,7 +81,7 @@
                         <xsl:attribute name="class">
                             <xsl:value-of select="'copyright'"/>
                         </xsl:attribute>
-                        <xsl:apply-templates select="xhtml:div[@tei='teiHeader']/xhtml:div[@tei='fileDesc']/xhtml:div[@tei='publicationStmt']/xhtml:span[@tei='availability']"/>
+                        <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='publicationStmt']/xhtml:*[@tei='availability']"/>
                     </xsl:element>
                 </xsl:element>
             </xsl:element>

@@ -54,6 +54,17 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="tei:title[@level = 'a' or @level = 'u']">
+        <xsl:element name="cite" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline tei-nofontstyle'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:element>
+    </xsl:template>
 
     <!-- TEI ref target=url ==> HTML a class=tei-ref href=url -->
     <xsl:template match="tei:ref[@target]">
@@ -105,25 +116,29 @@
             <xsl:apply-templates select="@*"/>
             <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'tei tei-block'"/>
+                    <xsl:value-of select="'tei tei-block tei-hr tei-verticalmargin'"/>
                 </xsl:attribute>
             </xsl:element>
-            <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="'tei tei-inline tei-editorial'"/>
+                    <xsl:value-of select="'tei tei-block tei-verticalmargin'"/>
                 </xsl:attribute>
-                <xsl:choose>
-                    <xsl:when test="@n">
-                        <xsl:value-of select="fn:concat('[beginning of page: ',@n)"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="'[beginning of page'"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-                <xsl:if test="@type">
-                    <xsl:value-of select="fn:concat(' (',@type,')')"/>
-                </xsl:if>
-                <xsl:value-of select="']'"/>
+                <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+                    <xsl:attribute name="class">
+                        <xsl:value-of select="'tei tei-inline tei-editorial'"/>
+                    </xsl:attribute>
+                    <xsl:choose>
+                        <xsl:when test="@n">
+                            <xsl:value-of select="fn:concat('beginning of page: ',@n)"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'beginning of page'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:if test="@type">
+                        <xsl:value-of select="fn:concat(' (',@type,')')"/>
+                    </xsl:if>
+                </xsl:element>
             </xsl:element>
             <xsl:apply-templates/>
         </xsl:element>
@@ -257,7 +272,7 @@
     </xsl:template>
 
     <!-- TEI * ref="http..." ==> HTML <a href="http...">*...</a> -->
-    <xsl:template match="element()[@ref]">
+    <xsl:template match="*[@ref]">
         <xsl:element name="a" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="tei">
                 <xsl:value-of select="fn:local-name()"/>
@@ -280,7 +295,6 @@
     <!-- TEI choice ==> HTML span class="choice" title -->
     <xsl:template match="tei:choice[tei:expan|tei:reg|tei:corr]">
         <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
-            <xsl:apply-templates select="@*"/>
             <xsl:attribute name="tei">
                 <xsl:value-of select="fn:local-name()"/>
             </xsl:attribute>
@@ -290,6 +304,22 @@
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:distinct-values((tei:expan,tei:reg,tei:corr))"/>
             </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:expan|tei:reg|tei:corr">
+        <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-hidden'"/>
+            </xsl:attribute>
+            <xsl:attribute name="hidden">
+                <xsl:value-of select="'hidden'"/>
+            </xsl:attribute>3.2.5.2.6 Embedded content
+
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
@@ -313,9 +343,7 @@
                     </xsl:for-each>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:value-of select="'['"/>
             <xsl:apply-templates/>
-            <xsl:value-of select="']'"/>
         </xsl:element>
     </xsl:template>
 
@@ -338,12 +366,6 @@
                     </xsl:for-each>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
-                <xsl:attribute name="class">
-                    <xsl:value-of select="'tei tei-editorial'"/>
-                </xsl:attribute>
-                <xsl:value-of select="'['"/>
-            </xsl:element>
             <xsl:if test="fn:not(node())">
                 <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:attribute name="class">
@@ -353,12 +375,6 @@
                 </xsl:element>
             </xsl:if>
             <xsl:apply-templates/>
-            <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
-                <xsl:attribute name="class">
-                    <xsl:value-of select="'tei tei-editorial'"/>
-                </xsl:attribute>
-                <xsl:value-of select="']'"/>
-            </xsl:element>
         </xsl:element>
     </xsl:template>
 
@@ -392,7 +408,7 @@
     </xsl:template>
 
 
-    <xsl:template match="tei:*[fn:contains-token(@rend, 'sup') or fn:contains-token(@rend, 'turnover')]">
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'sup') or fn:contains-token(@type, 'turnover')]">
         <xsl:element name="sup" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="tei">
                 <xsl:value-of select="fn:local-name()"/>
@@ -404,7 +420,7 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="tei:*[fn:contains-token(@rend, 'sub') or fn:contains-token(@rend, 'turnunder')]">
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'sub') or fn:contains-token(@type, 'turnunder')]">
         <xsl:element name="sub" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="tei">
                 <xsl:value-of select="fn:local-name()"/>
@@ -428,18 +444,6 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="tei:*[fn:contains-token(@rend, 'underline')]">
-        <xsl:element name="u" namespace="http://www.w3.org/1999/xhtml">
-            <xsl:attribute name="tei">
-                <xsl:value-of select="fn:local-name()"/>
-            </xsl:attribute>
-            <xsl:attribute name="class">
-                <xsl:value-of select="'tei tei-inline'"/>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-
     <xsl:template match="tei:*[fn:contains-token(@rend, 'bold')]">
         <xsl:element name="b" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="tei">
@@ -452,6 +456,31 @@
         </xsl:element>
     </xsl:template>
 
+    <xsl:template match="tei:*[fn:contains-token(@rend, 'underline')]">
+        <xsl:element name="u" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="tei:del|tei:*[fn:contains-token(@rend, 'overstrike')]">
+        <xsl:element name="s" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="tei">
+                <xsl:value-of select="fn:local-name()"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-inline'"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+
 
     <xsl:template match="tei:teiHeader">
         <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
@@ -461,8 +490,10 @@
             <xsl:attribute name="class">
                 <xsl:value-of select="'tei tei-hidden'"/>
             </xsl:attribute>
+            <xsl:attribute name="hidden">
+                <xsl:value-of select="'hidden'"/>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-
 </xsl:stylesheet>

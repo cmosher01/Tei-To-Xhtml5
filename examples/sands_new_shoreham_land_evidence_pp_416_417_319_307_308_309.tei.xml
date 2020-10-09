@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>sands new shoreham land evidence pp 416 417 319 307 308 309</title>
+        <author/>
+        <principal>Christopher Alan Mosher</principal>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Christopher Alan Mosher</authority>
+        <pubPlace>Shelton, CT, USA</pubPlace>
+        <date>2018</date>
+        <availability status="restricted">
+          <p>Copyright © 2018, Christopher Alan Mosher, Shelton, Connecticut, USA.</p>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <correction status="low">
+          <p>OCR generated transcript has not been corrected.</p>
+        </correction>
+        <normalization method="markup">
+          <p>Only minor normalization where needed, if any, is indicated via markup.</p>
+        </normalization>
+        <punctuation marks="all" placement="internal">
+          <p>All punctuation marks in the source text have been retained, and are represented by appropriate Unicode code points.</p>
+          <p>Punctuation may be marked up with pc elements for clarification, but not exclusively.</p>
+        </punctuation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained, and are represented by appropriate Unicode code points.</p>
+        </quotation>
+        <hyphenation eol="all">
+          <p>Hyphenated words that appear at the end of a line have been retained. The hyphen, if present, is represented by the Unicode code point, and marked up with a pc element. The break="no" attribute on the lb element indicates that a single word is split across the lines.</p>
+        </hyphenation>
+        <interpretation>
+          <p>Dates, places, and names may be marked up, where useful.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date/>
+        <rs type="place"/>
+      </creation>
+      <langUsage>
+        <language ident="en-US">English (USA)</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic xml:id="page-000" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-000.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-001" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-001.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-002" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-002.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-003" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-003.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-004" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-004.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-005" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_new_shoreham_land_evidence_pp_416_417_319_307_308_309/p-005.ptif/full/full/0/default.jpg"/>
+  </facsimile>
+  <text xml:lang="en-US">
+    <body>
+        <pb n="350v" facs="#page-000"/>
+        <head>
+          <persName xml:id="SarahSands" ref="https://mosher.mine.nu/genealogy/?person_uuid=b9c9440b-3100-4100-85cb-b9bac85ccd59"><forename>sarah</forename> <surname>sands</surname></persName>
+          seall (#) Block island alias new shorum
+        </head>
+        <div type="entry" n="will">
+          <div type="section" n="header">
+            <ab>
+              <lb/>In
+              <w xml:id="the"><choice><abbr>þ<hi rend="sup">e</hi></abbr><expan>the</expan></choice></w>
+              name of God Amen I <persName copyOf="#SarahSands"/> of
+              <lb/><placeName>Block island alias new shorum in <w copyOf="#the"/> Coliny of Rhod is
+              <lb break="no"/>Land and prouidence plantations in new ingland</placeName>
+              <lb/>being aged and weake in body but of sound and
+              <lb/>perfect memory praise be giuen to allmighty
+              <lb/>God for <w copyOf="#the"/> same and knowing <w copyOf="#the"/> unsertainty of this
+              <lb/>Life one Earth and being desireous to settel things
+              <lb/>in order Before my death dow make this my last
+              <lb/>will and testament in maner and forme foloing
+            </ab>
+          </div>
+          <div type="section" n="overview">
+            <div type="clause" n="dower">
+              <ab>
+                <lb/>I being wife to
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=eda2e3b4-e409-4ab5-b9a3-ce72c2ce7fe5">
+                  <roleName type="honorific" full="abb">
+                    <choice><abbr>M<hi rend="sup">r</hi></abbr><expan>Mister</expan></choice>
+                  </roleName>
+                  Iames Sands
+                </persName>
+                deseased and
+                <lb/>made sole Executrix by my
+                <w xml:id="said"><choice><abbr>sd</abbr><expan>said</expan></choice></w>
+                husband as by will
+                <lb/>bareing date
+                <date calendar="julian" datingMethod="julian" when-custom="1694-06-18">
+                  Iune <w copyOf="#the"/> 18<hi rend="sup">th</hi> 1694
+                </date>
+                may plainly appear
+              </ab>
+          </div>
+            <div type="clause" n="soul">
+              <ab>
+                <lb/>that is to saye first and prinsipally I Commend my
+                <lb/>soul to allmity God my Creatur assueredly be<pc force="weak">-</pc>
+                <lb break="no"/>leiuing that I shall Receiue full pardon and free
+                <lb/>Remision of all my sins and be sauid by <w copyOf="#the"/> presi
+                <lb break="no"/>ous death and merits of my blesed sauiour and Re
+                <lb break="no"/>Deamer Christ Iesus
+              </ab>
+            </div>
+            <div type="clause" n="body">
+              <ab>
+                and my body to <w copyOf="#the"/> Earth from
+                <lb/>whence it was first Tacken to be buried in such Dease
+                <seg type="turnover"><pc force="weak">(</pc>nt</seg>
+                <lb/>and Christian maner as to my <rs type="person" ref="#EdwardSands">Executer</rs> hearafter
+                <lb/>named shall be thought most meet and conuenient
+              </ab>
+            </div>
+            <div type="clause" n="estate">
+              <ab>
+                <lb/>and as touching such worldly <seg xml:id="estate">Estate</seg> as <w copyOf="#the"/> Lord in
+                <lb/>marcy hath lent me my will and meaning is <seg corresp="#estate"><w copyOf="#the"/>
+                <lb/>same</seg> shall be impleied and bestowed as hear
+                <lb break="no"/>after by this my will is Exspresed
+              </ab>
+            </div>
+            <div type="clause" n="revoke">
+              <ab>
+                and first I dow
+                <lb/>Renounce reuock <choice><orig>floustarate</orig><reg>frustrate</reg></choice> and make uoid all
+                <lb/>wills by me formerly made and declared and apoint
+                <lb/>This my last will and testament in maner and form
+                <lb/>following
+              </ab>
+            </div>
+          </div>
+          <div type="section" n="items">
+            <div n="1" type="item">
+              <ab>
+                Itum furst I giue and be quea<subst><del>f</del><add type="overwrite">th</add></subst> and
+                <lb/>my will is that all my Debts and funarall Charg
+                <seg type="turnover"><pc force="weak">(</pc>es</seg>
+                <lb/>be payed and Dis Charged
+              </ab>
+            </div>
+            <div n="2" type="item">
+              <ab>
+                Item 2 ly I giue and
+                <lb/>prins<subst><del rend="overstrike">e</del><add type="overwrite">a</add></subst>pelly
+                make my youngest sonn <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7743f941-02a7-4b0f-a678-127dda80083f">Edward sands</persName>
+                <lb/>my sole Executor of all my hole Estate both Catell sheep
+                <lb/>hors coyne and housal stuf or what so euer I shall leaue
+                <lb/>at my Death Exsepting and reseruing what is hear
+                <lb break="no"/>after mentioned which is fiue Cows and one hun
+                <lb break="no"/>Dred sheep which my will is that thay shall be e
+                <lb break="no"/>quilly deuided amoungst my fiue Children which
+                <lb/>are as followeth
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=62904934-5ba2-42fb-80ff-b3cf399efe96">Iohn sands</persName>
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7b496bb7-0e29-427b-bea4-0b4290d93e2f">Iames sands</persName>
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=d3b139a6-48e7-4ca8-9bfd-5984a4fd11c9">Samuel<lb/>sands</persName> and
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=fd8c40e1-3106-4fa3-836c-0a1ea9725673">sarah niels</persName> and
+                <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=691172eb-06a9-4403-b0c1-5fe159386e74">marcy Ramond</persName> and
+                <lb/>Dow freely giue and be queafe to each of them
+                <pb n="351r" facs="#page-001"/>
+                <fw type="pageNum" place="top" rend="center circled">351</fw>
+                <lb/>All former gifts or monys due to me from them all
+                <lb break="no"/>ways
+
+                prouided that <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7b496bb7-0e29-427b-bea4-0b4290d93e2f">Iames Sands</persName> doth foreuer aqui<unclear>r</unclear>
+                <seg type="turnover">e</seg>
+                <lb/>Any protended <del rend="overstrike"><unclear>or</unclear></del> right oR Clame of Asertain<pc>:</pc> ne
+                <lb break="no"/>gero woman comanly caled by <w copyOf="#the"/> name of <persName ref="#Leano">leano</persName> <pc>- -</pc>
+                <lb/>Bought of <persName ref="#DavidBrown">Dauid Broun</persName>
+                otherways <w copyOf="#the"/> <w copyOf="#said"/> <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7b496bb7-0e29-427b-bea4-0b4290d93e2f">Iames
+                <lb/>Sands</persName> shall paye to <w copyOf="#the"/> person home shall be dispose
+                <seg type="turnover"><pc force="weak">(</pc>s</seg>
+                <lb break="no"/>ed of <w copyOf="#said"/> <rs type="person" ref="#Leano">neagore woman</rs> by <w copyOf="#said"/> <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7b496bb7-0e29-427b-bea4-0b4290d93e2f">Sands</persName> meanes
+                <lb/>twenty pounds currant mony which he <w copyOf="#the"/> <w copyOf="#said"/> <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7b496bb7-0e29-427b-bea4-0b4290d93e2f">Iames
+                <lb/>Sands</persName> hath all Redy reseiued of me tenn pounds by
+                <lb/>his Brother <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=62904934-5ba2-42fb-80ff-b3cf399efe96">Iohn Sands</persName>
+                and tenn pounds of <rs type="person" ref="#SarahSands">my self</rs>
+                <lb/>in wool and cheas and butter which <rs type="person" ref="#JamesSandsJr">he</rs> hath Receiued
+                <lb/>upon <w copyOf="#the"/> Acounte of <w copyOf="#said"/> <rs type="person" ref="#Leano">negero</rs>
+              </ab>
+            </div>
+            <div n="3" type="item">
+              <ab>
+                Itum 3 I giue to
+                <lb/>my Grandaughter <persName ref="https://www.familysearch.org/tree/person/details/LBCN-KNG">Sarah Niels</persName> one good fether beed
+                <lb/>and Bolster and tow pillows and one blancket
+              </ab>
+            </div>
+            <div n="4" type="item">
+              <ab>
+                Itum
+                <lb/>4 I giue to my Daughter <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=691172eb-06a9-4403-b0c1-5fe159386e74">marcy Ramond</persName> one good
+                <lb/>larg Chest onely what Goods shall be left in <w copyOf="#said"/> Chest
+                <lb/>shall be Equilly deuided betwene hur self and my
+                <lb/>Daughter in law <persName ref="https://www.familysearch.org/tree/person/details/LC1L-GBP">mary sands</persName> wife to my sonn
+                <lb/><persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7743f941-02a7-4b0f-a678-127dda80083f">Edward sands</persName>
+              </ab>
+            </div>
+            <div n="5" type="item">
+              <ab>
+                Itum 5 I giue to my tow Daughters
+                <lb/><persName ref="https://mosher.mine.nu/genealogy/?person_uuid=fd8c40e1-3106-4fa3-836c-0a1ea9725673">sarah niels</persName>
+                and <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=691172eb-06a9-4403-b0c1-5fe159386e74">marcy Ramond</persName> each of them a
+                <lb/>Good larg puter platter apease
+              </ab>
+            </div>
+          </div>
+          <div type="section" n="residue">
+            <ab>
+              all <w copyOf="#the"/> Rest of my <w copyOf="#said"/>
+              <lb/><seg corresp="#estate">Estate</seg> I dow freely giue unto my Executor
+              <persName ref="https://mosher.mine.nu/genealogy/?person_uuid=7743f941-02a7-4b0f-a678-127dda80083f">Ed
+              <lb break="no"/>ward sands</persName> him and his hayors for Euer
+            </ab>
+          </div>
+          <div type="section" n="execution">
+            <ab>
+              as<pc> - -</pc>
+              <lb/>witness my hand and seall this
+              <date calendar="julian" datingMethod="julian" when-custom="1703-10-17">
+                seuent<subst><del>h</del><add type="overwrite">eenth</add></subst>
+                <lb/>of october one Thousand seuen hundred and<lb/>Three
+              </date>
+              and in
+              <date datingMethod="EnglandRegnalYear" when-custom="2 Anne">
+                <w copyOf="#the"/> second year of hur magistys
+                <lb/>queen an of ingland scotland
+              </date>
+              <pc>¶</pc>
+              <lb/>
+              <lb/><persName copyOf="#SarahSands"/> hur seall (#)
+            </ab>
+          </div>
+          <div type="section" n="witness">
+            <p>
+              <lb/>signed sealed and Deliuered in presence of<lb/>us
+              <lb/><persName ref="#SamuelNiles">Samuel Niels</persName>
+              <lb/><persName ref="#HannahRose">Hanah Rose</persName> hur mark H
+              <lb/><persName ref="#NathanielMott">Nathell Mot</persName>
+            </p>
+          </div>
+        </div>
+        <div type="entry" n="certified">
+          <p>
+            <lb/>A tru copy taken
+            <lb/>out of <w copyOf="#the"/> origanall
+            <lb/>will by me <persName ref="#JobCard">Iob
+            <lb/>Card <roleName type="office">town
+              <lb/>Clark</roleName></persName>
+          </p>
+        </div>
+        <div type="entry" n="proved">
+          <p>
+            <lb/>At A meeting at <w copyOf="#the"/> hous of <persName ref="#EdwardBall">Edward Ball</persName>s
+            <lb/>By <w copyOf="#the"/> town Counsell of shorum
+            <date calendar="julian" datingMethod="julian" when-custom="1709-06-13">
+              Iune <w copyOf="#the"/> 13<hi rend="sup">th</hi><lb/>1709
+            </date>
+            <persName ref="#SamuelNiles">samuel niels</persName> of Kings town and
+            <lb/><persName ref="#NathanielMott">nathanal mott</persName> of shorum both of <w copyOf="#the"/> Coliny
+            <lb/>of Rhodisland personaly Apearing before
+            <lb/>us and testifeeing upon oath that <w copyOf="#the"/> <rs type="person" ref="#SarahSands">tes
+            <lb break="no"/>Tater</rs> was in her per<subst><del>f</del><add type="overwrite">p</add></subst>het mind and
+            <lb/>memory at <w copyOf="#the"/> signings
+            <lb/>And sealing of this tes
+            <lb break="no"/>Tament
+          </p>
+          <p>
+            <lb/>as atested by us
+            <lb/><persName ref="#SimonRay">Simon Ray <roleName type="office">Ward<unclear>en</unclear></roleName></persName>
+            <lb/>and <persName ref="#EdwardBall">Edward Ball <roleName type="office">War<unclear>den</unclear></roleName></persName>
+          </p>
+          <p>
+            <lb/><persName ref="#SimonRay">Simon Ray</persName>
+            <lb/><persName ref="#JobCard">Iob Card</persName>
+            <lb/><persName ref="#ThomasRathbone">Thomas Rath bon</persName>
+          </p>
+        </div>
+
+
+
+
+<pb n="339r" facs="#page-002"/>
+<div><ab>[A transcription of this page is not available.]</ab></div>
+
+
+
+
+
+
+
+
+<pb n="295r" facs="#page-003"/>
+<div><ab>
+        <lb/>In the name of God, amen, I, Iames Sandys of Block Is.
+        <lb/>aleas New Shorum in the Colleny of Road Island &amp; Providence Plan
+        <lb/>tation being sick &amp; weak of Body but of Sound &amp; perfectt mind
+        <lb/>&amp; memory Prayse be therefoere given to almighty God doe make &amp;
+        <lb/>and order this my present last will &amp; testement in manner &amp; forme follow
+        <lb/>ing, that is to say first &amp; principally I commend my sule into the
+        <lb/>hand of Almighty God hoping through the merritts Death and passio[n]
+        <lb/>of [our] saviour Iesus Christ, to have Iust &amp; free pardon of all my sins &amp; to
+        <lb/>inheritt etternall life and my body I commit to the Earth to be
+        <lb/>Deacently buried at the Discression of my Executtrix hereafter
+        <lb/>named &amp; as touching the Disposition of all such temperall Estate
+        <lb/>as it hath pleased almighty God to bestow upon me I give &amp; dispose
+        <lb/>there of as followeth First I will that all my Detts &amp; funerall Charges be
+        <lb/>payd &amp; discharged Item first I give unto my Deer &amp; Loveing wife
+        <lb/>Sarah Sandys all my whole estate Reall &amp; personall upon Block
+        <lb/>During her naturall Life housing &amp; land houshould goods &amp; liveing stock and
+        <lb/>any other Estate whatsoever which now belongeth properly to me not yet
+        <lb/>Conveyed by me to any other But after the Deceasse of my Deer wife I
+        <lb/>give &amp; Dispose of all my Lands as followeth first I give unto my son
+        <lb/>Iames Sandys to him his Heirs Executtors Administrators &amp; Assignes my tractt
+        <lb/>of Land in the Southeast Called the High Land &amp; Wegashick plaine
+        <lb/>more or Less Leying as It is now fenced buted on the <del>South</del> East by the [sound]
+        <lb/>on the North by the stone wall of my cow pasture by the south by my
+        <lb/>son Iohn Sandys Land formerly M<hi rend="sup">r</hi> Gutterys on the West on Land I gave
+        <lb/>my son Samuell fenced parttly by a wall &amp; parttly by a hedge also I give
+        <lb/>unto sayd son Iames half the orchard in the Greatt Swamp the land to
+        <lb/>containe two Acres &amp; half for the orchard aforesayd &amp; also all my [part]
+        <lb/>of the greatt Lott in the neck Leying between my Son Iohns Land and [that]
+        <lb/>formerly M<hi rend="sup">r</hi> [Te]rr[ys] east &amp; west Secondly I give unto my sonn Samuell
+        <lb/>Sandys his Heirs Executtors Administrators &amp; Assignes all the tractt of
+        <lb/>land that is now Left out to the Land in Common in South East Commo[nly]
+        <lb/>called Wegashik plaine &amp; M<hi rend="sup">r</hi> Wharttons one feild butted on the South with
+        <lb/>son Iohns Land he had of M<hi rend="sup">r</hi> Guttery on the West by son Iohns land and
+        <lb/>mill river &amp; parttly on greatt swamp on the north with the stone
+        <lb/>wall on the East by Iames Land by the stone wall &amp; hedges &amp; all me[a]d[ow]
+        <lb/>that belong to me in the Corne Neck also I give to Each sonn Iames Sandys
+        <lb/>&amp; Samuell A suffitient highway to their severall parts of Land in South East
+        <lb/>before menttioned to be through the cow pasture where Iutte East to the
+        <lb/>Conveniency &amp; theye are to maintaine sufitient gaitte or barr to prevent
+        <lb/>trespass &amp; Damage to the other lands Also I give unto my youngest
+        <lb/>son Edward Sandys his Heirs &amp; Assignes all my homstid namly my cow
+        <lb/>pasture &amp; meadow &amp; Dam pasture &amp; feild before the dam &amp; Calf pasture
+        <lb/>&amp; greatt swamp &amp; half the orchard being bounded as they are now fenced
+        <lb/>on Every side with the mill &amp; all other benifits to them belonging &amp;
+        <lb/>my other Children which have ben marid Satrday year Ago namely my
+        <lb/>sonn Iohn Sandys &amp; my Daughter Sarah Neyls wife of Nathaniel Neyls
+        <lb/>who I have given formerly what Estate I doe Designe them &amp; doe
+        <lb/>Confirm to Each of them According to their tittles Each &amp; <unclear><gap/></unclear>
+        <lb/>his heirs &amp; Assigns for Ever &amp; my Daughter Marcy Raymond wife of
+      <pb n="295v" facs="#page-004"/>
+        <lb/>Ioshua Raymond who upon her mariage I gave four scare Acres
+        <lb/>of land in the Corne Neck unto &amp; by deed of gift ordered to her
+        <lb/>my sayd Daughter &amp; her heirs lawfully begotten of her body I doe now
+        <lb/>upon good Causes &amp; Considerattion Give the sayd land in the Corne
+        <lb/>neck being four scare Acres free from inlaylment to be to my sayd
+        <lb/>Daughter marcy Raymond &amp; her husband Ioshua Raymond to them
+        <lb/>their heirs Executto<hi rend="sup">rs</hi> Administrattors &amp; Assigns for Ever to use &amp;
+        <lb/>Improve sell &amp; Dispose as they shall think best Also I will that
+        <lb/>All liveing stock &amp; houshould Goods &amp; Chattels and any moveable
+        <lb/>Estatte whatsoeve<hi rend="sup">r</hi> that my Dere wife Sarah Sandys shall have
+        <lb/>the Disposeing of It where &amp; to whome she thinks best all the Rest &amp;
+        <lb/>Residue of any other Estate belonging to me that may Appear I doe
+        <lb/>now give unto my Deer wife who I will &amp; Appoint shall be my sole
+        <lb/>Executrix of this my last will &amp; testemen<hi rend="sup">t</hi> and I doe hereby Revoke
+        <lb/>&amp; Disanull all othe<hi rend="sup">r</hi> forme<hi rend="sup">r</hi> will &amp; testament by me heretofore made
+        <lb/>by me I now make voyd <pc>.</pc> In wittness whereof I the sayd Iames Sandys
+        <lb/>have sett my hand &amp; seall In Block Island Iune the 18<hi rend="sup">th</hi> Anno Domini
+        <lb/>1694 sined &amp; sealed In the presenc of us &amp; sined at the top of the
+        <lb/>first side &amp; sealed before wittnesed
+
+        <lb/>Iames Sandys his mark S (IS)
+        <lb/>Simon Raye
+        <lb/>Iohn Rathbone
+        <lb/>Christopher Swaine
+        <lb/>Ioseph Rathbone his mark I
+
+        <lb/>The 6<hi rend="sup">th</hi> day of may 1695 the testimony <add>abovesd</add> being m<hi rend="sup">r</hi>
+        <lb/>Simon Ray Senio<hi rend="sup">r</hi> Iohn Rathbon Christopher Swaine
+        <lb/>all of them personally Appeard before the Town
+        <lb/>Councill at the house of m<hi rend="sup">r</hi> Iames Sandys Deceasd
+        <lb/>&amp; their took their Deposition that the Abovesd Instrumen<hi rend="sup">t</hi>
+        <lb/>was the Will &amp; Testiment of m<hi rend="sup">r</hi> Iames Sandys <gap/> Deceasd
+        <lb/>taken before uss
+        <lb/>Simon Ray head warden
+        <lb/>Edward Ball Deputy
+
+        <lb/>An enventory of the Estatt of m<hi rend="sup">r</hi> Iames Sandys Seny<hi rend="sup">r</hi>
+        <lb/>Desesed this <pc>:</pc> 13<hi rend="sup">th</hi> <pc>:</pc> Day of march 1694/5 As set out Imp<hi rend="sup">rs</hi>
+        <lb/>to abowt 400 ackers of lande
+        <lb/>to <pc>:</pc>56<pc>:</pc> head of ca<subst><del><unclear><gap/></unclear></del><add type="overstrike">tt</add></subst>ell small and great
+        <lb/>to horses mares and colts 3 in all
+        <lb/>to 30 swine old and young
+        <lb/>to Abowt 3 hundred sheepe
+        <lb/>to a negur woman the hous &amp; barne &amp; mill
+        <lb/>to sundery houshould Goods not aprisd
+
+        <lb/>The abovesayd and with Inmenshoned and the Administrate other
+        <lb/><gap/> last will &amp; testemente of mr Iames Sandys Seny<hi rend="sup">r</hi> Desesed
+        <lb/>Is a trew Copy taken out of the originall this <pc>:</pc> 13<hi rend="sup">th</hi> <pc>:</pc> Day of may 1695
+        <lb/>p<hi rend="sup">er</hi> me Nath<hi rend="sup">ll</hi> mott
+        <lb/>Clerk and Warden
+</ab></div>
+
+
+<pb n="296r" facs="#page-005"/>
+<fw type="pageNum" place="top" rend="center">296</fw>
+<div><ab>
+<lb/>Be It Known unto all men by these presence
+<lb/>That I Iames Sands Sen<hi rend="sup">r</hi> of block island alles new shorum
+<lb/>In Road island Colony and providence plantation being by the providence
+<lb/>of allmighty god at this present very Gravly weake and sickley of body but
+<lb/>of sound and perfectt mind and memorey blessed be the Lord for
+<lb/>the same upon god in solled Considerations Doe ad this small
+<lb/>[cadesall unto] my Last will and testament made this Last sumer
+<lb/>past wherin I have settled my Land on this Island to my severall
+<lb/>Sons as therin expresed where as I have given my Son Samuell
+<lb/>Sands his share of Land I gave to my youngest Soon Edward &amp;
+<lb/>on the East with the Land I have willed to my son Iames Sandys
+<lb/>and on the West with my soon Iohn Sandys Land Called his Calves
+<lb/>pasture I will that Iams Sandys shall maintaine all the petssion
+<lb/>Fence betwene Samuels Land &amp; his Sheere of Land In good Repair
+<lb/>for him Said Samuell for the full Space of tenn years to be
+<lb/>maintained on Iames proper Charge and aftur ten years Expired
+<lb/>to be maintain as neighbors ought to Doe and my Son Edward
+<lb/>Sands I requiore to Doe the same to maintaine all the petsion
+<lb/>Fence In the layne betwene them In good Repayre tenn
+<lb/>yere hence and allso to maintaine Samuells Sheere ~
+<lb/>of fence betwene my sonn Iohns Calfs pasture &amp; Samuell
+<lb/>If Iohn Requior any there to be maintained by his brother Samuell
+<lb/>also my son Iames Sandys shall asiste &amp; be at Equal Charge
+<lb/>with Edward Sandys In maintaining said fence betwene
+<lb/>Iohn and Samuell [] If said fence which now remains
+<lb/>by my son Iohn Sandys be Requiored to be maintaind as same
+<lb/>generally Are maintaind by naigbors to be only Deuring the
+<lb/>yere asforesd aecondly I will and Desire that my Son Samuell
+<lb/>Sandys shall have the one full halfe of all my upland In []
+<lb/>the Corne neck being the one half of my great lot which [is]
+<lb/>about the medle of the Corne neck bounded by the high way
+<lb/>on the west william Rathbone and Coy Sewel In the north Te[r]y
+<lb/>Swa[n]ye on the East : mr guttedy land on the south the
+<lb/>one halfe I will to Samuell lot shall Devide Equely with
+<lb/>Iames and lastly I will that my Sonn Samuell Shall have
+<lb/>his full parsel of all the landse I here give hime and what
+<lb/>formerly In my Last will and testamente I have be bequ[eathed]
+<lb/>to be Imediaettely In his posesion his hayrs or asignes for Ever to
+<lb/>be Delevered at my Deseease for his proper par[tt]iculer youse and bene
+<lb/>fitt as witnes my hand and se<hi rend="sup">ll</hi> In the year of our Lord 1694
+<lb/>Febu[ar]y 14<hi rend="sup">th</hi> Signd se[al]d In prsants of uss
+<lb/>At some time be fore Signed and Seald furthe[r ]ad[s] by the [aforesaid]
+<lb/>Iames Sandys Senr that Samuel Sandys Ahall have the [whole half]
+<lb/>of my greatt lott In the Corne neck Into his posession and my son
+<lb/>Iames Sandys to have none of my lands In the neck []
+<lb/>my hand the Day and year afore saide the mark of IS Iames Sands
+
+<lb/>the testemonys Afore said being [] [Simon Ray]
+<lb/>Ioshua Raymand [] [before the same] [apeared]
+<lb/>[] &amp; [took] oath that this [instrument] was an [official]
+<lb/>[] addition to the last will and testament []
+<lb/>[]
+
+<lb/>155
+
+<lb/>signed seld In presenc of
+<lb/>Simon Raye
+<lb/>Nath<hi rend="sup">ll</hi> mott
+</ab></div>
+    </body>
+  </text>
+</TEI>

@@ -29,7 +29,7 @@
 
     <!-- DEFAULT: TEI element ==> XHTML div OR span -->
     <xsl:template match="tei:*">
-        <xsl:element name="{if (tei:isInline(.)) then 'span' else 'div'}" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="tei">
                 <xsl:value-of select="fn:local-name()"/>
             </xsl:attribute>
@@ -57,7 +57,7 @@
                 <xsl:for-each select="$element">
                     <xsl:choose>
                         <xsl:when test="self::tei:TEI">false</xsl:when>
-                        <xsl:when test="parent::tei:div">false</xsl:when>
+                        <xsl:when test="self::tei:div">true</xsl:when>
                         <xsl:when test="parent::tei:titlePage">false</xsl:when>
                         <xsl:when test="parent::tei:body">false</xsl:when>
                         <xsl:when test="parent::tei:front">false</xsl:when>
@@ -93,6 +93,7 @@
                         <xsl:when test="self::tei:biblScope">true</xsl:when>
                         <xsl:when test="self::tei:byline">true</xsl:when>
                         <xsl:when test="self::tei:c">true</xsl:when>
+                        <xsl:when test="self::tei:cl">true</xsl:when>
                         <xsl:when test="self::tei:choice">true</xsl:when>
                         <xsl:when test="self::tei:collection">true</xsl:when>
                         <xsl:when test="self::tei:country">true</xsl:when>
@@ -140,6 +141,7 @@
                         <xsl:when test="self::tei:origPlace">true</xsl:when>
                         <xsl:when test="self::tei:pc">true</xsl:when>
                         <xsl:when test="self::tei:persName">true</xsl:when>
+                        <xsl:when test="self::tei:phr">true</xsl:when>
                         <xsl:when test="self::tei:placeName">true</xsl:when>
                         <xsl:when test="self::tei:ptr">true</xsl:when>
                         <xsl:when test="self::tei:publisher">true</xsl:when>
@@ -154,12 +156,14 @@
                         <xsl:when test="self::tei:roleName">true</xsl:when>
                         <xsl:when test="self::tei:rubric">true</xsl:when>
                         <xsl:when test="self::tei:rs">true</xsl:when>
+                        <xsl:when test="self::tei:s">true</xsl:when>
                         <xsl:when test="self::tei:said">true</xsl:when>
                         <xsl:when test="self::tei:seg">true</xsl:when>
                         <xsl:when test="self::tei:sic">true</xsl:when>
                         <xsl:when test="self::tei:settlement">true</xsl:when>
                         <xsl:when test="self::tei:space">true</xsl:when>
                         <xsl:when test="self::tei:soCalled">true</xsl:when>
+                        <xsl:when test="self::tei:subst">true</xsl:when>
                         <xsl:when test="self::tei:summary">true</xsl:when>
                         <xsl:when test="self::tei:supplied">true</xsl:when>
                         <xsl:when test="self::tei:surname">true</xsl:when>
@@ -168,6 +172,7 @@
                         <xsl:when test="self::tei:textLang">true</xsl:when>
                         <xsl:when test="self::tei:title">true</xsl:when>
                         <xsl:when test="self::tei:unclear">true</xsl:when>
+                        <xsl:when test="self::tei:w">true</xsl:when>
                         <xsl:when test="self::tei:width">true</xsl:when>
                         <xsl:when test="empty($element/..)">false</xsl:when>
                         <xsl:when test="not(self::tei:p) and tei:isInline($element/..)">true</xsl:when>
