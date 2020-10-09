@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Jesse Sands Family Bible Records</title>
+        <author/>
+        <principal>Christopher Alan Mosher</principal>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Christopher Alan Mosher</authority>
+        <pubPlace>Shelton, CT, USA</pubPlace>
+        <date>2018</date>
+        <availability status="restricted">
+          <p>Copyright © 2018–9, Christopher Alan Mosher, Shelton, Connecticut, USA.</p>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title level="u">Jesse Sands Family Bible Records, 1768–1943</title>,
+          <title level="m">The Holy Bible: Containing the Old and New Testaments: Together with the Apocrypha</title>,
+          (<pubPlace>Philadelphia</pubPlace>: <publisher>Mathew Carey</publisher>, <date>1811</date>),
+          <citedRange>677–80</citedRange>, “Family Record”;
+          Binding is brown leather, dimensions approximately 234 × 281 × 89 mm, “HOLY-BIBLE” on spine,
+          front title page is missing, but it has “New Testament” title page between pages 834 and 835
+          (note: page numbers 829–834 are duplicated),
+          page one begins with “¶ The <hi rend="sc">first book</hi> of <hi rend="sc">moses</hi>, <hi rend="sc">called</hi> <hi rend="sc">genesis</hi>.”
+          Entries are handwritten in ink, mostly dark, but a few entries have faded, the entries are in various different hands.
+          Ownership probably: Jesse Sands, Mary Sands Harrison, Henry Francis Harrison, George Elmer Harrison,
+          John Harrison, Sally Harrison Brown Duff, Christopher Alan Mosher.
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <correction status="high">
+          <p>Diplomatic transcription.</p>
+        </correction>
+        <normalization method="markup">
+          <p>Only minor normalization where needed, if any, is indicated via markup.</p>
+        </normalization>
+        <punctuation marks="all" placement="internal">
+          <p>All punctuation marks in the source text have been retained, and are represented by appropriate Unicode code points.</p>
+          <p>Punctuation may be marked up with pc elements for clarification, but not exclusively.</p>
+        </punctuation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained, and are represented by appropriate Unicode code points.</p>
+        </quotation>
+        <hyphenation eol="all">
+          <p>Hyphenated words that appear at the end of a line have been retained. The hyphen, if present, is represented by the Unicode code point, and marked up with a pc element. The break="no" attribute on the lb element indicates that a single word is split across the lines.</p>
+        </hyphenation>
+        <interpretation>
+          <p>Dates, places, and names may be marked up, where useful.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date/>
+        <rs type="place"/>
+      </creation>
+      <langUsage>
+        <language ident="en-US">English (USA)</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic xml:id="page-000" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_1.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-001" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_2.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-002" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_3.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-003" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_4.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-004" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_5.ptif/full/full/90/default.jpg"/>
+    <graphic xml:id="page-005" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_6.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-006" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_bible_7.ptif/full/full/0/default.jpg"/>
+  </facsimile>
+  <text xml:lang="en-US">
+    <body>
+<ab rend="grid">
+<pb n="677" facs="#page-000"/>
+<lb/><fw type="pageNum" place="top" rend="center">[ 677 ]</fw>
+<lb/><fw type="header">FAMILY RECORD.</fw>
+<cb n="1"/>
+<lb/>MARRIAGES.
+<p>
+  <lb/>Jesse Sands Was
+  <lb/>Married to
+  <lb/>Mary Pardee
+  <lb/><date when="1800-02-20">Feb<hi rend="sup">..y</hi> 20<hi rend="sup underline">th..</hi> 1800</date>
+</p>
+<p>
+  <lb/>Harvey Sands
+  <lb/>Was Married to
+  <lb/>Sally Haasze
+  <lb/><date when="1822-02-27">Feb<hi rend="sup">..y</hi>.. 27..<hi rend="sup">th..</hi> 182<subst><del>1</del><add type="overwrite">2</add></subst></date>
+</p>
+<p>
+  <lb/>Sarah W Sands was
+  <lb/>Married to
+  <lb/>Willis H. Gaylord
+  <lb/><date when="1826-06-07">June 7<hi rend="sup">th</hi> 1826</date>
+</p>
+<p>
+  <lb/>John P Sands was
+  <lb/>Married to
+  <lb/>Candace Gaylord
+  <lb/><date when="1826-06-08">June 8<hi rend="sup">th</hi> 1826</date>
+</p>
+<cb n="2"/>
+<lb/>MARRIAGES.
+<p>
+  <lb/>Mary Sands
+  <lb/>was Married to
+  <lb/>George Harrisson
+  <lb/><date when="1835-02-19">Feb,<hi rend="sup">y</hi> 19<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1835</date>
+</p>
+<pb n="678" facs="#page-001"/>
+<lb/><fw type="pageNum" place="top" rend="center">[ 678 ]</fw>
+<lb/><fw type="header">FAMILY RECORD.</fw>
+<cb n="1"/>
+<lb/>BIRTHS.
+<p>
+  <lb/>Jesse Sands Born
+  <lb/><date when="1768-06-07">June the Seventh 1768</date>
+</p>
+<p>
+  <lb/>Mary Sands Born
+  <lb/><date when="1768-06-18">June the Eighteenth 1768</date>
+</p>
+<p>
+  <lb/>Harvey Sands
+  <date when="1801-02-10">Feb<hi rend="sup"><hi rend="underline">y</hi>..</hi> 10<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1801</date>
+</p>
+<p>
+  <lb/>John P Sands
+  <date when="1803-08-15">Aug<hi rend="sup"><hi rend="underline">t</hi>..</hi> 15<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1803</date>
+</p>
+<p>
+  <lb/>Sarah W Sands
+  <date when="1805-10-29">Oc<hi rend="sup"><hi rend="underline">t</hi>..</hi> 29<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1805</date>
+</p>
+<p>
+  <lb/>Mary Sands
+  <date when="1809-03-14">March 14<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1809</date>
+</p>
+<cb n="2"/>
+<lb/>BIRTHS.
+<p>
+  <lb/>Born <date when="1836-05-11">May 11<hi rend="sup">th</hi> 1836</date>
+</p>
+<p>
+  <lb/>William N Harrison Born
+  <lb/><date when="1837-06-19">June 19<hi rend="sup">th</hi> 1837</date>
+</p>
+<p>
+  <lb/>:: Born <date when="1839-03-14">March 14<hi rend="sup">th</hi>, 1839</date>
+</p>
+<p>
+  <lb/>Henry F Harrison Born
+  <lb/><date when="1840-05-24">May 24<hi rend="sup">th</hi> 1840</date>
+</p>
+<p>
+  <lb/>Emma A Harrison Born
+  <lb/><date when="1843-05-27">May 2<subst><del>4</del><add type="overwrite">7</add></subst><hi rend="sup underline">th</hi> 1843</date>
+</p>
+<p>
+  <lb/>John J Harrison Born
+  <lb/><date when="1845-07-13">July 13<hi rend="sup">th</hi> 1845</date>
+</p>
+<p>
+  <lb/>Sarah A Harrison Born
+  <lb/><date when="1848-01-19">January 19<hi rend="sup">th</hi> 1848</date>
+</p>
+<pb n="679" facs="#page-002"/>
+<lb/><fw type="pageNum" place="top" rend="center">[ 679 ]</fw>
+<lb/><fw type="header">FAMILY RECORD.</fw>
+<cb n="1"/>
+<lb/>BIRTHS.
+<cb n="2"/>
+<lb/>DEATHS.
+<p>
+  <lb/>In Memory of
+  <lb/>My honoured Father in Law
+  <lb/>John Pardee Who Died
+  <lb/><date when="1808-04-26">April 26<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1808</date> Being
+  <lb/>in the 71<hi rend="sup"><hi rend="underline">st</hi>..</hi> year of his age . . . .
+</p>
+<p>
+  <lb/>In memory of my hono<pc>&#x2010;</pc>
+  <lb break="no"/><pc>&#x2010;</pc>ured Mother in Law. . .
+  <lb/>Sarah Pardee who Died. .
+  <lb/>.. <date when="1820-10-19">Oct 19..<hi rend="sup">th</hi> 1820</date> Being in the
+  <lb/><surplus>the</surplus> 83 year of her age. . . . . . .
+</p>
+<p>
+  <lb/>In Memory of my honoured . . .
+  <lb/>Mother Martha Sands who Died . .
+  <lb/><date when="1815-04-30">April the 30<hi rend="sup underline">th</hi> 1815</date> Being in the . . .
+  <lb/>Eightieth year of her age . . . . . . . . . . . . .
+</p>
+<p>
+  <lb/>.. In memory of my honoured
+  <lb/>.... Father Othiniel Sands who . .
+  <lb/>... Died <date when="1823-01-05">Jan..<hi rend="sup">y</hi>.. 5<hi rend="sup">th</hi> 1823</date>.. Being
+  <lb/>in his 90 year. . . . . . . . . . . . .
+</p>
+<p>
+  <lb/>In memory of my hon<pc>&#x2010;</pc>
+  <lb break="no"/><pc>&#x2010;</pc>oured Sister Sarah Pardee . .
+  <lb/>. . who Died <date when="1803-01-07">Jan..<hi rend="sup">y</hi>.. 7<hi rend="sup">th</hi> 1803</date>..
+  <lb/>Being in the 37<hi rend="sup">th</hi> year of her age
+</p>
+<pb n="680" facs="#page-003"/>
+<lb/><fw type="pageNum" place="top" rend="center">[ 680 ]</fw>
+<lb/><fw type="header">FAMILY RECORD.</fw>
+<cb n="1"/>
+<lb/>DEATHS.
+<p>
+  <lb/>In Memory of Samuel Clapp
+  <lb/>my Honoured Brother in=law
+  <lb/>who died <date when="1825-03-02">March the 2<hi rend="sup"><hi rend="underline">nd</hi>..</hi> 1825</date>
+</p>
+<p>
+  <lb/>In memory of George
+  <lb/>Harrison who died
+  <lb/><date when="1850-08-08">Aug<hi rend="sup"><hi rend="underline"><supplied>t</supplied></hi>..</hi> 8<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1850</date> aged
+  <lb/>45 years and 26 days
+</p>
+<p>
+  <lb/>In Memory of Mary E.
+  <lb/>Harrison who Died
+  <lb/><date when="1894-12-03">Dec. 3<hi rend="sup">rd</hi> 1894</date> aged
+  <lb/>84 years 8 months 19 days
+</p>
+<p>
+  <lb/>Henry F. Harrison
+  <lb/>died <date when="1912-06-14">June 1<subst><del>2</del><add type="overwrite">4</add></subst>, 1912</date>
+</p>
+<p>
+  <lb/>son of &#x2191;
+  <lb/>Elmer Harrison
+  <lb/>died at Sayre Pa.
+  <lb/><date when="1943-04-29">Apr. 29, 1943</date>.
+</p>
+<cb n="2"/>
+<lb/>DEATHS.
+<p>
+  <lb/>In Memory of Jesse
+  <lb/>Sands who died <date when="1842-06-30">June
+  <lb/>30<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1842</date> aged 74 year<supplied>s</supplied>
+  <lb/>and 23 days
+</p>
+<p>
+  <lb/>In Memory of Mary
+  <lb/>Sands who died <date when="1843-12-26">De<hi rend="sup"><hi rend="underline">c</hi>..</hi>
+  <lb/>26<hi rend="sup"><hi rend="underline">th</hi>..</hi> 1843</date> aged seventy
+  <lb/>five year<supplied>s</supplied> six months
+  <lb/>and eight days
+</p>
+<pb n="1" facs="#page-006"/>
+<hi rend="center">
+<lb/>¶ The FIRST BOOK of MOSES,
+<lb/><hi rend="sc">called</hi>
+<lb/>GENESIS.
+</hi>
+<pb facs="#page-004"/>
+<hi rend="center">
+<lb/>THE
+<lb/>NEW TESTAMENT
+<lb/>OF OUR
+<lb/>LORD AND SAVIOUR
+<lb/>JESUS CHRIST,
+<lb/>TRANSLATED
+<lb/>OUT OF THE ORIGINAL GREEK;
+<lb/>AND
+<lb/>WITH THE FORMER TRANSLATIONS
+<lb/>DILIGENTLY COMPARED AND REVISED,
+<lb/>By the Special Command of King James I. of England.
+<lb/>PHILADELPHIA:
+<lb/>PRINTED AND PUBLISHED BY MATHEW CAREY, No. 122, MARKET STREET.
+<lb/>1811.
+</hi>
+<pb facs="#page-005"/>
+<hi rend="center">
+<lb/>HOLY‐BIBLE
+</hi>
+</ab>
+    </body>
+  </text>
+</TEI>

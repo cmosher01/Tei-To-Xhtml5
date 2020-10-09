@@ -48,7 +48,7 @@
                 <xsl:value-of select="fn:local-name()"/>
             </xsl:attribute>
             <xsl:attribute name="class">
-                <xsl:value-of select="'tei tei-hidden'"/>
+                <xsl:value-of select="'tei'"/>
             </xsl:attribute>
             <xsl:attribute name="hidden">
                 <xsl:value-of select="'hidden'"/>

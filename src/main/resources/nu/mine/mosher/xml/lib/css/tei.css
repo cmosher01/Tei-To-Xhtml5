@@ -17,11 +17,6 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-sup,
-sub {
-    line-height: 100%
-}
-
 .tei-inline {
     display: inline;
 }
@@ -39,10 +34,35 @@ sub {
 }
 
 .tei-limsize {
-    width: 100%;
-    object-fit: scale-down;
-    object-position: left top;
     max-height: 1500px;
+    max-width: 100%;
+}
+
+.tei[rend~=italic] {
+    font-style: italic;
+}
+
+.tei[rend~=bold] {
+    font-weight: bold;
+}
+
+.tei[rend~=underline] {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.tei[rend~=sup],
+.tei[type=turnover] {
+    position: relative;
+    font-size: 75%;
+    top: -0.5em;
+}
+
+.tei[rend~=sub],
+.tei[type=turnunder] {
+    position: relative;
+    font-size: 75%;
+    top: 0.5em;
 }
 
 .tei[rend~=center] {
@@ -63,7 +83,7 @@ sub {
 }
 
 .tei[rend~=sc] {
-    font-variant: small-caps;
+    font-variant-caps: small-caps;
 }
 
 .tei[rend~=large] {

@@ -74,12 +74,12 @@
                 <xsl:element name="footer" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml">
                         <xsl:attribute name="class">
-                            <xsl:value-of select="'tei'"/>
+                            <xsl:value-of select="'tei tei-hr tei-verticalmargin'"/>
                         </xsl:attribute>
                     </xsl:element>
                     <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                         <xsl:attribute name="class">
-                            <xsl:value-of select="'copyright'"/>
+                            <xsl:value-of select="'tei tei-block'"/>
                         </xsl:attribute>
                         <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='publicationStmt']/xhtml:*[@tei='availability']"/>
                     </xsl:element>
