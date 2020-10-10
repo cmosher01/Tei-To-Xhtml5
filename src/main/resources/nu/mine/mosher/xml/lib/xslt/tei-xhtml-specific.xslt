@@ -159,7 +159,7 @@
     <xsl:template match="tei:table">
         <xsl:element name="table" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">
-                <xsl:value-of select="'tei tei-block'"/>
+                <xsl:value-of select="'tei'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates mode="table"/>
@@ -168,7 +168,7 @@
     <xsl:template match="tei:row" mode="table">
         <xsl:element name="tr" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">
-                <xsl:value-of select="'tei tei-block'"/>
+                <xsl:value-of select="'tei'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates mode="table_row"/>
@@ -177,7 +177,7 @@
     <xsl:template match="tei:cell" mode="table_row">
         <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">
-                <xsl:value-of select="'tei tei-block'"/>
+                <xsl:value-of select="'tei'"/>
             </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates/>
