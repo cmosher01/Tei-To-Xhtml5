@@ -175,10 +175,10 @@
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:cell" mode="table_row">
-        <xsl:attribute name="class">
-            <xsl:value-of select="'tei tei-block'"/>
-        </xsl:attribute>
         <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="class">
+                <xsl:value-of select="'tei tei-block'"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates/>
         </xsl:element>

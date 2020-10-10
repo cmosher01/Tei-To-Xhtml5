@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>sands genealogy fixed</title>
+        <author/>
+        <principal>Christopher Alan Mosher</principal>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Christopher Alan Mosher</authority>
+        <pubPlace>Shelton, CT, USA</pubPlace>
+        <date>2018</date>
+        <availability status="restricted">
+          <p>Copyright © 2018, Christopher Alan Mosher, Shelton, Connecticut, USA.</p>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <correction status="low">
+          <p>OCR generated transcript has not been corrected.</p>
+        </correction>
+        <normalization method="markup">
+          <p>Only minor normalization where needed, if any, is indicated via markup.</p>
+        </normalization>
+        <punctuation marks="all" placement="internal">
+          <p>All punctuation marks in the source text have been retained, and are represented by appropriate Unicode code points.</p>
+          <p>Punctuation may be marked up with pc elements for clarification, but not exclusively.</p>
+        </punctuation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained, and are represented by appropriate Unicode code points.</p>
+        </quotation>
+        <hyphenation eol="all">
+          <p>Hyphenated words that appear at the end of a line have been retained. The hyphen, if present, is represented by the Unicode code point, and marked up with a pc element. The break="no" attribute on the lb element indicates that a single word is split across the lines.</p>
+        </hyphenation>
+        <interpretation>
+          <p>Dates, places, and names may be marked up, where useful.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date/>
+        <rs type="place"/>
+      </creation>
+      <langUsage>
+        <language ident="en-US">English (USA)</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <facsimile>
+    <graphic xml:id="page-000" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_genealogy_fixed/p-000.ptif/full/full/!270/default.jpg"/>
+    <graphic xml:id="page-001" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_genealogy_fixed/p-001.ptif/full/full/90/default.jpg"/>
+    <graphic xml:id="page-002" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_genealogy_fixed/p-002.ptif/full/full/0/default.jpg"/>
+    <graphic xml:id="page-003" url="https://mosher.mine.nu/images/genealogy/main/sources/old/harrison/sands_genealogy_fixed/p-003.ptif/full/full/0/default.jpg"/>
+  </facsimile>
+  <text xml:lang="en-US">
+    <body>
+      <ab rend="grid">
+
+
+
+
+<pb n="1" facs="#page-000"/>
+<p>
+<lb/>Edwin Sands Born in England
+<lb/>in the 15 century was made
+<lb/>Archbishop of York by Queen
+<lb/>Elizabeth, had 2 Sons James &amp; John
+</p>
+<p>
+  <lb/>A Record of the Sands Family
+  <lb/><add>first</add> from <hi rend="underline">James</hi> Sands Who came from
+  <lb/>England where <add>he</add> was Born 1622 came to
+  <lb/>America 1638. Married Sarah Walker
+  <lb/>of Port<subst><del>t</del><add rend="overwrite">s</add></subst>mouth
+  R. I, 1647 moved to Block
+  <lb/>Island where he Died March 13<hi rend="sup">th</hi>, 1695, had
+  <lb/>6 Children, John, Sarah, Mary, <hi rend="underline">James</hi>, Samuel
+  <lb/>Edward, <add>second</add> his Son <hi rend="underline">James</hi> was Born Block
+  <lb/>Island 1671, moved to Lond Isl. 1696,
+  <lb/>Married Mary (Russel) Cornell 1697, died
+  <lb/>1731, had 9 nine Children, <hi rend="underline">Othiniel</hi>, Mary,
+  <lb/>Abijah, James, John, Susanah, Bathsheba,
+  <lb/>Je<subst><del>m</del><add>ru</add></subst>she, Sarah,
+</p>
+<p>
+  <lb/><hi rend="underline">Othiniel</hi> Born, Long Island, 1699,
+  <lb/>Married, 1723, to Susanah Daughter
+  <lb/>of Nicholas Lang, Moved to Bedford
+  <lb/>Westchester, Co, NY, 1746, Died 1757,
+  <lb/>had eleven 11 Children, William, James,
+  <lb/>Caleb, John L, <hi rend="underline">Othiniel</hi>, Samuel, Joshua
+  <lb/>Susanah, Sarah, and Mary.
+</p>
+<p>
+  <lb/><hi rend="underline">Othiniel</hi> Born, January 27, 1733
+  <lb/>at Long Island <del>Married</del> Married Martha
+  <lb/>Ketchum 1750
+  <lb/>he had six Children, John, Ruth, Samuel
+  <lb/><hi rend="underline">Jessee</hi>, Martha, Nathaniel, — — —
+</p>
+<p>
+  <lb/><hi rend="underline">Jessee</hi>, Born, June 7 seventh 1768
+  <lb/>Married, Mary Daughter of John Pardee
+  <lb/>Feb 20,<hi rend="sup">th</hi> 1800, had Four children
+  <lb/><hi rend="underline">Harvey</hi>, John P, Sarah W, Mary.
+</p>
+<p>
+  <lb/><hi rend="underline">Harvey</hi> Maried Sally Haasze Feb 27, 1822
+</p>
+<p>
+  <lb/>John P.. <hi rend="sup">to</hi> Candace Gaylord June, 8<hi rend="sup">th</hi> 1826
+</p>
+<p>
+  <lb/>Sarah, W, <hi rend="sup">to</hi> Willis H Gaylord June, 7<hi rend="sup">th</hi> 1826
+</p>
+<p>
+  <lb/>Mary, Married George Harrison Feb 19<hi rend="sup">th</hi>, 1835
+  <lb/>Has five Children. William N, Henry F,
+  <lb/>Emma A, John J, Sarah A,
+  <lb/>William N, Born June 19,<hi rend="sup">th</hi> 1837--
+  <lb/>Henry F, Born, May 24,<hi rend="sup">th</hi> 1840,
+  <lb/>Emma A, Born May 27,<hi rend="sup">th</hi> 1843
+  <lb/>John J, Born July 13,<hi rend="sup">th</hi> 1845
+  <lb/>Sarah A, Born January 19, 1848
+</p>
+
+
+
+
+<pb n="2" facs="#page-001"/>
+<lb/>Peekskill Westchester Co NY
+<table>
+  <row><cell>Brother</cell><cell>Caleb Sands</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell>Othaniel Sands</cell><cell>Born</cell><cell>1733</cell><cell>jan</cell><cell>27<hi rend="sup">th</hi></cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell>Martha (Ketchum) Sands</cell><cell>&#x3003;</cell><cell>June</cell><cell>14<hi rend="sup">th</hi></cell><cell>1735</cell><cell></cell><cell></cell></row>
+  <row><cell>Children</cell><cell>John Sands.</cell><cell>&#x3003;</cell><cell>Oct</cell><cell>25</cell><cell>1761</cell><cell>Children.</cell>
+  <cell>Nathaniel, Henry, William James. B. Betsyan Martha Margarett gerusha Rosanah</cell>
+  </row>
+  <row><cell></cell><cell>Ruth Sands</cell><cell>&#x3003;</cell><cell>Dec</cell><cell>25<hi rend="sup">th</hi></cell><cell>1763</cell><cell>. . .</cell><cell>none</cell></row>
+  <row><cell></cell><cell>Samuel Sands</cell><cell></cell><cell>April</cell><cell>16<hi rend="sup">th</hi></cell><cell>1766</cell><cell>. . . .</cell><cell>Betsy, James, Reuben Elias</cell></row>
+  <row><cell></cell><cell>Jessee Sands</cell><cell>&#x3003;</cell><cell>June</cell><cell>7<hi rend="sup">th</hi></cell><cell>1768</cell><cell>. . . .</cell><cell>Harvy John <add>P</add> Sarah W. Mary E</cell></row>
+  <row><cell></cell><cell>Martha Sands</cell><cell></cell><cell>July</cell><cell>6</cell><cell>1771</cell><cell>. . . .</cell><cell>none</cell></row>
+  <row><cell></cell><cell>Nathaniel Sands</cell><cell>&#x3003;</cell><cell>Aug</cell><cell>20</cell><cell>1773</cell><cell>. . . .</cell><cell>none</cell></row>
+</table>
+[family tree chart shows decendants from Othanial Sands:]
+Jessee Sands... Harvey. John J. Sarah W. Mary.
+[Harvey's children:]
+Michael [married?:] Emily Lewis
+Joshua
+Martha
+Erastus
+George
+Rosanah
+Jane
+Laura
+William
+[John J.'s children:]
+[Parmelia?]
+Jereme
+Lydia
+Mary Jane [written above other names]
+Ezra
+Aurelia
+Charlie
+Markus
+
+
+
+
+<pb n="3" facs="#page-002"/>
+  <lb/>Willis, H Gaylord Born May 17, 1804.
+  <lb/>Sarah, W Sands October 29<hi rend="sup">th</hi> 1805
+  <lb/>Hornby
+  <lb/>Willis, H. Gaylord Was Married
+  <lb/>to Sarah W Sands June 7<hi rend="sup">th</hi> 1826
+
+  <lb/>Children Born
+  <lb/>Adaline E Gaylord Born Feb 2 1827
+  <lb/>Sophia L Gaylord <del>Feb</del> January 23<hi rend="sup">rd</hi>
+  <lb/>1829, Died April 14<hi rend="sup">th</hi> 1863
+  <lb/>Cornelia L Gaylord January 19<hi rend="sup">th</hi> 1831
+  <lb/>Cornelia Died 3 children sept 9<hi rend="sup">th</hi> 1870
+  <lb/>Franklin Gaylord April 30<hi rend="sup">th</hi> 1833
+  <lb/>Franklin Died, Dec. 3<hi rend="sup">rd</hi> 1867, 2 children
+  <lb/>Melvina, Gaylord, July 31<hi rend="sup">st</hi> 1836
+  <lb/>Melvina, Died April 1<hi rend="sup">st</hi> 1886
+  <lb/>Alonzo Jessee Gaylord Nov 12 1838
+  <lb/>Alonzo J Died October, 14 1862
+  <lb/>Mary, Eliz Gaylord Febuary 2, 1841
+  <lb/>Lucius Marvin, Gaylord, March 29<hi rend="sup">th</hi>, 1843
+  <lb/>Marcus Gaylord, August 14<hi rend="sup">th</hi> 1845
+  <lb/>Willis B Gaylord, August, 29<hi rend="sup">th</hi> 1849
+  <lb/>Died March 26<hi rend="sup">th</hi> 1853
+
+
+
+
+
+<pb n="4" facs="#page-003"/>
+  <lb/>Adaline, G married Josiah Underwood
+  <lb/>August 4<hi rend="sup">th</hi> 1853 Children 4
+  <lb/>Sophia G to O. Hendrick, oct, 12, 1854
+  <lb/>Cornelia to Geo. Kelsey, oct 23rd 1859
+  <lb/>3 Children) (two Children
+  <lb/>Franklin to Mary Grey April 4<hi rend="sup">th</hi> 1860
+  <lb/>Mary, E, to Henry Greey Sept 22, 1864
+  <lb/>Sophia &amp; Melvina &amp; Mary no children
+  <lb/>Melvina to Wm H Green oct 7<hi rend="sup">th</hi> 1875
+
+  <lb/>Lucius M to Irene Egbert April, 14
+  <lb/>1876 3 Children none living
+  <lb/>Alonzo, J, unmaried
+  <lb/>Marcus to Gabriella Shannon
+  <lb/>Febuary 22 1877, 4 Children
+  <lb/><del>Willis, B.</del> <del>Died, 4 years old</del>
+
+</ab>
+    </body>
+  </text>
+</TEI>
