@@ -90,6 +90,10 @@
     font-size: 150%;
 }
 
+.tei-del {
+    text-decoration-line: line-through;
+}
+
 .tei-hr {
     border-width: 1px 0 0 0;
     border-style: dotted;

@@ -27,12 +27,9 @@
     <xsl:output method="xml" version="1.1" encoding="UTF-8"/>
     <xsl:mode on-no-match="shallow-copy"/>
 
-    <!-- DEFAULT: TEI element ==> XHTML div OR span -->
+    <!-- DEFAULT: TEI element ==> XHTML div -->
     <xsl:template match="tei:*">
         <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
-            <xsl:attribute name="tei">
-                <xsl:value-of select="fn:local-name()"/>
-            </xsl:attribute>
             <xsl:attribute name="class">
                 <xsl:choose>
                     <xsl:when test="tei:isInline(.)">

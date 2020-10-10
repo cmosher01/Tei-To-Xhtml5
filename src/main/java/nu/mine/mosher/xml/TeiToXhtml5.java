@@ -50,6 +50,7 @@ public class TeiToXhtml5 {
         pipeline.xslt(lib("xslt/tei-copyOf.xslt"));
         pipeline.xslt(lib("xslt/tei-facs.xslt"));
         pipeline.xslt(lib("xslt/tei-norm-text.xslt"));
+        pipeline.xslt(lib("xslt/tei-teiattr.xslt"));
         pipeline.xslt(lib("xslt/tei-xhtml-specific.xslt"));
         pipeline.xslt(lib("xslt/tei-xhtml-general.xslt"));
         if (createFullPage) {
