@@ -274,9 +274,9 @@
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:local-name()"/>
-                <xsl:if test="@*">
+                <xsl:if test="@* except @tei">
                     <xsl:value-of select="': '"/>
-                    <xsl:for-each select="@*">
+                    <xsl:for-each select="@* except @tei">
                         <xsl:value-of select="fn:concat(fn:local-name(),'=',.,' ')"/>
                     </xsl:for-each>
                 </xsl:if>
@@ -303,9 +303,9 @@
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="fn:local-name()"/>
-                <xsl:if test="@*">
+                <xsl:if test="@* except @tei">
                     <xsl:value-of select="': '"/>
-                    <xsl:for-each select="@*">
+                    <xsl:for-each select="@* except @tei">
                         <xsl:value-of select="fn:concat(fn:local-name(),'=',.,' ')"/>
                     </xsl:for-each>
                 </xsl:if>
