@@ -86,6 +86,10 @@
     font-variant-caps: small-caps;
 }
 
+.tei[rend~=small] {
+    font-size: 67%;
+}
+
 .tei[rend~=large] {
     font-size: 150%;
 }
