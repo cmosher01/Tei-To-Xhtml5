@@ -1,10 +1,87 @@
-def inc(module) {
-    apply from: "${projectDir}/gradle/${module}.gradle"
+plugins {
+    id 'application'
+    id 'java-library'
+    id 'signing'
+    id 'maven-publish'
 }
 
-inc('version')
-inc('project')
-inc('dependencies')
-inc('srcjar')
-inc('maven')
-inc('bintray')
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api group: 'nu.mine.mosher.xml', name: 'xslt-pipeline', version: 'latest.release'
+
+    runtimeOnly group: 'xerces', name: 'xercesImpl', version: 'latest.release', {
+        exclude group: 'xml-apis'
+    }
+    runtimeOnly group: 'net.sf.saxon', name: 'Saxon-HE', version: 'latest.release'
+}
+
+application {
+    mainClassName = 'nu.mine.mosher.xml.TeiToXhtml5'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of 11
+    }
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            pom {
+                name = 'Tei-To-Xhtml5'
+                description = 'Generates XHTML5 web pages from TEI formatted documents'
+                url = 'https://github.com/cmosher01/Tei-To-Xhtml5'
+                inceptionYear = '2020'
+                packaging = 'jar'
+                licenses {
+                    license {
+                        name = 'GNU General Public License v3.0'
+                        url = 'https://www.gnu.org/licenses/gpl-3.0.html'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'cmosher01'
+                        name = 'Christopher Alan Mosher'
+                        email = 'cmosher01@gmail.com'
+                        url = 'https://mosher.mine.nu'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/cmosher01/Tei-To-Xhtml5.git'
+                    developerConnection = 'scm:git:ssh://github.com/cmosher01/Tei-To-Xhtml5.git'
+                    url = 'https://github.com/cmosher01/Tei-To-Xhtml5'
+                }
+            }
+        }
+    }
+}
+tasks.assemble.dependsOn tasks.generatePomFileForMavenPublication
+
+signing {
+    sign publishing.publications.maven
+}
+tasks.assemble.dependsOn tasks.signMavenPublication
+
+publishing {
+    repositories {
+        maven {
+            url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+        }
+    }
+}
+
+group = 'nu.mine.mosher.xml'
+
+version = '1.1.7'
