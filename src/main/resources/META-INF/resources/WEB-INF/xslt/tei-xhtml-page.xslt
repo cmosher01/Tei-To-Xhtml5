@@ -41,11 +41,8 @@
                     <xsl:attribute name="rel">
                         <xsl:value-of select="'stylesheet'"/>
                     </xsl:attribute>
-                    <xsl:attribute name="type">
-                        <xsl:value-of select="'text/css'"/>
-                    </xsl:attribute>
                     <xsl:attribute name="href">
-                        <xsl:value-of select="'style.css'"/>
+                        <xsl:value-of select="'/tei.css'"/>
                     </xsl:attribute>
                 </xsl:element>
                 <xsl:element name="title" namespace="http://www.w3.org/1999/xhtml">

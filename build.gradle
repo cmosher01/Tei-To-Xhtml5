@@ -1,33 +1,7 @@
 plugins {
-    id 'application'
-    id 'java-library'
+    id 'java'
     id 'signing'
     id 'maven-publish'
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    api group: 'nu.mine.mosher.xml', name: 'xslt-pipeline', version: 'latest.release'
-
-    runtimeOnly group: 'xerces', name: 'xercesImpl', version: 'latest.release', {
-        exclude group: 'xml-apis'
-    }
-    runtimeOnly group: 'net.sf.saxon', name: 'Saxon-HE', version: 'latest.release'
-}
-
-application {
-    mainClassName = 'nu.mine.mosher.xml.TeiToXhtml5'
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of 11
-    }
-    withJavadocJar()
-    withSourcesJar()
 }
 
 publishing {
@@ -68,15 +42,17 @@ tasks.assemble.dependsOn tasks.generatePomFileForMavenPublication
 signing {
     sign publishing.publications.maven
 }
-tasks.assemble.dependsOn tasks.signMavenPublication
+if (hasProperty('signing.secretKeyRingFile')) {
+    tasks.assemble.dependsOn tasks.signMavenPublication
+}
 
 publishing {
     repositories {
         maven {
             url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = ossrhUsername
-                password = ossrhPassword
+                username = findProperty('ossrhUsername') ?: 'restricted'
+                password = findProperty('ossrhPassword') ?: 'restricted'
             }
         }
     }
@@ -84,4 +60,4 @@ publishing {
 
 group = 'nu.mine.mosher.xml'
 
-version = '1.1.7'
+version = '2.0.0'
