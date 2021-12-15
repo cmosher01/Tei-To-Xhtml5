@@ -33,7 +33,7 @@
                         <xsl:value-of select="'stylesheet'"/>
                     </xsl:attribute>
                     <xsl:attribute name="href">
-                        <xsl:value-of select="'/nu/mine/mosher/xml/tei.css'"/>
+                        <xsl:value-of select="'/assets/styles/nu/mine/mosher/xml/tei.css'"/>
                     </xsl:attribute>
                 </xsl:element>
                 <xsl:element name="title" namespace="http://www.w3.org/1999/xhtml">
