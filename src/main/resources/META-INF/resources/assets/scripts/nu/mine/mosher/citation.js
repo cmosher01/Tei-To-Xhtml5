@@ -22,6 +22,12 @@ function doCopy() {
     e = e.iterateNext();
     var t = e.innerText;
     t = t.replace(/[\n\r]/g, "");
+    if (t.length == 0) {
+        var d = new Date();
+        d = d.toISOString();
+        d = d.substring(0,10);
+        t = "\u201C"+document.title+"\u201D ("+document.location+" : accessed "+d+").";
+    }
     copyToClipboard(t);
 }
 

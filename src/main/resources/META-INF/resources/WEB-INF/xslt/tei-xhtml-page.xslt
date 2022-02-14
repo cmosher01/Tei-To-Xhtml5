@@ -55,6 +55,7 @@
                         <xsl:attribute name="id">
                             <xsl:value-of select="'urn:uuid:2329b6e3-7951-40c0-9855-976a2f6baa94'"/>
                         </xsl:attribute>
+                        <xsl:value-of select="'Copy source citation'"/>
                     </xsl:element>
                 </xsl:element>
                 <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
