@@ -39,10 +39,23 @@
                 <xsl:element name="title" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:value-of select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='titleStmt']/xhtml:*[@tei='title']/text()" />
                 </xsl:element>
+                <xsl:element name="script" namespace="http://www.w3.org/1999/xhtml">
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="'/assets/scripts/nu/mine/mosher/citation.js'"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="defer">
+                        <xsl:value-of select="'defer'"/>
+                    </xsl:attribute>
+                </xsl:element>
             </xsl:element>
             <xsl:element name="body" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:element name="header" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='sourceDesc']"/>
+                    <xsl:element name="button" namespace="http://www.w3.org/1999/xhtml">
+                        <xsl:attribute name="id">
+                            <xsl:value-of select="'urn:uuid:2329b6e3-7951-40c0-9855-976a2f6baa94'"/>
+                        </xsl:attribute>
+                    </xsl:element>
                 </xsl:element>
                 <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                     <xsl:apply-templates select="@* | node()"/>
