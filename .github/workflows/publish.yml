@@ -1,0 +1,33 @@
+name: 'Publish'
+
+on:
+  release:
+    types:
+      - 'created'
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'Set up JDK'
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          server-id: 'github'
+          settings-path: '${{ github.workspace }}'
+
+      - name: 'Build'
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: 'build'
+
+      - name: 'Publish'
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: 'publish -PossrhUsername=${{ github.actor }} -PossrhPassword=${{ secrets.GITHUB_TOKEN }}'
