@@ -39,13 +39,6 @@ publishing {
 }
 tasks.assemble.dependsOn tasks.generatePomFileForMavenPublication
 
-signing {
-    sign publishing.publications.maven
-}
-if (hasProperty('signing.secretKeyRingFile')) {
-    tasks.assemble.dependsOn tasks.signMavenPublication
-}
-
 publishing {
     repositories {
         maven {
