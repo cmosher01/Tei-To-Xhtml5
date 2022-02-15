@@ -4,8 +4,27 @@ on:
     types:
       - 'created'
 jobs:
-  build:
-    uses: ./.github/workflows/gradle-build.yml
   publish:
-    needs: 'build'
-    uses: ./.github/workflows/gradle-publish.yml
+    runs-on: 'ubuntu-latest'
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          server-id: 'github'
+          settings-path: '${{ github.workspace }}'
+
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: 'build'
+
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: 'publish'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
