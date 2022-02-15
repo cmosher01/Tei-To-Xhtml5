@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'setup'
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          server-id: 'github'
+          settings-path: '${{ github.workspace }}'
+
+      - name: 'build'
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: 'build'
