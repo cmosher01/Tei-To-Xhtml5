@@ -1,3 +1,4 @@
+---
 on:
   release:
     types:
@@ -5,15 +6,6 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/gradle-build.yml
-
   publish:
-    runs-on: 'ubuntu-latest'
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: 'publish'
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+    needs: 'build'
+    uses: ./.github/workflows/gradle-publish.yml
