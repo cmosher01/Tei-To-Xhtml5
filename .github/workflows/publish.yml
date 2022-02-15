@@ -14,4 +14,6 @@ jobs:
     steps:
       - uses: gradle/gradle-build-action@v2
         with:
-          arguments: 'publish -PossrhUsername=${{ github.actor }} -PossrhPassword=${{ secrets.GITHUB_TOKEN }}'
+          arguments: 'publish'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
