@@ -20,6 +20,7 @@
 <xsl:stylesheet
     version="3.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
     <xsl:output method="xml" version="1.1" encoding="UTF-8"/>
@@ -43,17 +44,25 @@
                     <xsl:attribute name="src">
                         <xsl:value-of select="'/assets/scripts/nu/mine/mosher/citation.js'"/>
                     </xsl:attribute>
-                    <xsl:attribute name="defer">
-                        <xsl:value-of select="'defer'"/>
+                    <xsl:attribute name="async">
+                        <xsl:value-of select="'async'"/>
                     </xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="body" namespace="http://www.w3.org/1999/xhtml">
                 <xsl:element name="header" namespace="http://www.w3.org/1999/xhtml">
-                    <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='sourceDesc']"/>
-                    <xsl:element name="button" namespace="http://www.w3.org/1999/xhtml">
+                    <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
                         <xsl:attribute name="id">
-                            <xsl:value-of select="'urn:uuid:2329b6e3-7951-40c0-9855-976a2f6baa94'"/>
+                            <xsl:value-of select="fn:generate-id()"/>
+                        </xsl:attribute>
+                        <xsl:apply-templates select="xhtml:*[@tei='teiHeader']/xhtml:*[@tei='fileDesc']/xhtml:*[@tei='sourceDesc']"/>
+                    </xsl:element>
+                    <xsl:element name="button" namespace="http://www.w3.org/1999/xhtml">
+                        <xsl:attribute name="class">
+                            <xsl:value-of select="'tei-button-copy'"/>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-html-for">
+                            <xsl:value-of select="fn:generate-id()"/>
                         </xsl:attribute>
                         <xsl:value-of select="'Copy source citation'"/>
                     </xsl:element>

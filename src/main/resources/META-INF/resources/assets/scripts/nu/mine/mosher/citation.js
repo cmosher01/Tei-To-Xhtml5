@@ -10,17 +10,12 @@ function copyToClipboard(t) {
     alert("Citation copied to clipboard.");
 };
 
-function ns(p) {
-    if (p === "xhtml") {
-        return "http://www.w3.org/1999/xhtml";
-    }
-    return "";
-}
-
 function doCopy() {
-    var e = document.evaluate("./xhtml:header[1]/xhtml:div[@tei='sourceDesc']", document.body, ns, XPathResult.ANY_TYPE, null);
-    e = e.iterateNext();
-    var t = e.innerText;
+    const e = event || window.event;
+    const source = e.target || e.srcElement;
+    const idTarget = source.dataset.htmlFor;
+    const elemTarget = document.getElementById(idTarget);
+    var t = elemTarget.innerText;
     t = t.replace(/[\n\r]/g, "");
     if (t.length == 0) {
         var d = new Date();
@@ -32,7 +27,14 @@ function doCopy() {
 }
 
 function ready() {
-    document.getElementById("urn:uuid:2329b6e3-7951-40c0-9855-976a2f6baa94").onclick = doCopy;
+    const r = document.getElementsByClassName("tei-button-copy");
+    for (const i of r) {
+        i.onclick = doCopy;
+    }
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', ready);
+} else {
+  ready();
+}

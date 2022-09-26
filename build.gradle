@@ -3,6 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of 11
+    }
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
@@ -52,4 +58,4 @@ publishing {
 
 group = 'nu.mine.mosher.xml'
 
-version = '2.0.3'
+version = '2.0.4'
